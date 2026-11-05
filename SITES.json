@@ -1,0 +1,226 @@
+{
+ "version": "0.1.0",
+ "built": "2026-11-05",
+ "datum": "WGS84 (OSGB36 grid refs converted with pyproj EPSG:27700->4326)",
+ "rule": "Positions only from HER/Coflein/excavation records; anything not in a record is labelled 'reconstruction — estimated'.",
+ "anchor": {
+  "name": "St Dochdwy's Church, Llandough (anchor for Fig. 2 georeferencing)",
+  "lat": 51.452322,
+  "lon": -3.1986,
+  "sources": [
+   {
+    "label": "OpenStreetMap way 930357423 (centroid)",
+    "url": "https://www.openstreetmap.org/way/930357423"
+   },
+   {
+    "label": "Coflein NPRN 227363, ST1680073270 (12 m from OSM centroid)",
+    "url": "https://coflein.gov.uk/en/site/227363/"
+   }
+  ]
+ },
+ "sites": [
+  {
+   "id": "roundhouse",
+   "name": {
+    "en": "Iron Age roundhouse",
+    "cy": "Tŷ crwn o'r Oes Haearn",
+    "es": "Casa redonda de la Edad del Hierro"
+   },
+   "period": "late Iron Age, before c. AD 75 (pre-Conquest Glastonbury-ware pottery)",
+   "date_range": [
+    -100,
+    75
+   ],
+   "lat": 51.451217,
+   "lon": -3.198114,
+   "confidence": "medium for the farmstead site (beneath the villa, HER 00768s Phase I); LOW for the exact hut position, which no record we hold fixes",
+   "known": [
+    "Phase I of HER 00768s: Iron Age farmstead beneath the later villa",
+    "possible palisade trench, curvilinear slot and postholes read as a round hut (HER)",
+    "pottery incl. Glastonbury ware, probably pre-Conquest (HER)",
+    "'possible late Iron-age roundhouse, perhaps part of a farmstead' (Holbrook & Thomas 2005, p.3)"
+   ],
+   "estimated": [
+    "hut placed at the villa footprint centre",
+    "diameter 10 m, wall 1.6 m, roof 7 m, conical thatch — reconstruction — estimated, source: typical late Iron Age roundhouses of south-east Wales (Biglis, published in the same BAR 188 volume); not measured here",
+    "palisade ring radius 22 m — reconstruction — estimated"
+   ],
+   "evidence": [
+    {
+     "label": "Heneb HER PRN 00768s, NGR ST168732",
+     "url": "https://archwilio.org.uk/her/chi3/report/page.php?watprn=GGAT00768s"
+    },
+    {
+     "label": "Owen-John 1988, in Robinson (ed.) Biglis, Caldicot and Llandough, BAR Brit. Ser. 188, pp.123–77",
+     "url": ""
+    },
+    {
+     "label": "Holbrook & Thomas 2005, Medieval Archaeology 49, eprint p.3 and Fig. 2",
+     "url": "https://cotswoldarchaeology.co.uk/wp-content/uploads/2011/07/llandough-pdf-1.pdf"
+    },
+    {
+     "label": "Coflein NPRN 400051 (GGAT excavation 1979)",
+     "url": "https://coflein.gov.uk/en/site/400051/"
+    }
+   ],
+   "model": "models/roundhouse.glb"
+  },
+  {
+   "id": "villa",
+   "name": {
+    "en": "Llandough Roman villa",
+    "cy": "Fila Rufeinig Llandochau",
+    "es": "Villa romana de Llandough"
+   },
+   "period": "built 2nd century AD, much developed early 3rd century, occupied to the early 4th century",
+   "date_range": [
+    100,
+    330
+   ],
+   "lat": 51.451217,
+   "lon": -3.198114,
+   "confidence": "medium-high: position scaled from the published excavation plan (Holbrook & Thomas 2005 Fig. 2, 50 m scale bar) against the church; agrees with HER NGR ST168732 (100 m square) and lies c. 30 m north of Cogan Pill Road as the plan shows",
+   "georef": {
+    "method": "Fig. 2 scaled (4.15 px/m at 140 dpi); offset from church +33.7 m E, -122.9 m N",
+    "main_range_bearing_deg": 137,
+    "main_range_length_m": 45
+   },
+   "known": [
+    "rectangular stone buildings, one room hypocausted, adjoining a courtyard with a pair of ditches (Phase II, HER)",
+    "two new ranges incl. a small bath suite, a new precinct wall, a pipe trench with collars in situ (Phase III, 3rd–4th c., HER)",
+    "wall lines on Fig. 2: a range c. 45 m long on a NW–SE axis with room groups at both ends",
+    "some walls reused for a 12th/13th-century barn; a dovecote overlay the site (Holbrook & Thomas 2005)"
+   ],
+   "estimated": [
+    "wall heights 3.2 m, tiled roofs at 30°, corridor width 3 m — reconstruction — estimated",
+    "courtyard placed south-west of the range and precinct wall line — reconstruction — estimated; the record names them but we hold no plan of them"
+   ],
+   "evidence": [
+    {
+     "label": "Heneb HER PRN 00768s",
+     "url": "https://archwilio.org.uk/her/chi3/report/page.php?watprn=GGAT00768s"
+    },
+    {
+     "label": "Coflein NPRN 400051, ST1680073300",
+     "url": "https://coflein.gov.uk/en/site/400051/"
+    },
+    {
+     "label": "Holbrook & Thomas 2005 Fig. 2 'Location of the 1994 and earlier excavations'",
+     "url": "https://cotswoldarchaeology.co.uk/wp-content/uploads/2011/07/llandough-pdf-1.pdf"
+    },
+    {
+     "label": "Knight 2005, 'From Villa to Monastery: Llandough in Context', Medieval Archaeology 49",
+     "url": "https://www.tandfonline.com/doi/abs/10.1179/007660905x54053"
+    },
+    {
+     "label": "Glamorgan Archives D1230/7 (excavations c.1968)",
+     "url": "https://canfod.glamarchives.gov.uk/records/D1230/7"
+    }
+   ],
+   "model": "models/villa.glb"
+  },
+  {
+   "id": "monastery",
+   "name": {
+    "en": "Llandough early medieval monastery",
+    "cy": "Mynachlog Llandochau",
+    "es": "Monasterio altomedieval de Llandough"
+   },
+   "period": "established by at least the mid-7th century; closed by the late 10th/11th century",
+   "date_range": [
+    650,
+    1090
+   ],
+   "lat": 51.452601,
+   "lon": -3.198788,
+   "confidence": "high for the cemetery (excavated 1994, 0.22 ha immediately north of the churchyard wall); LOW for the monastic buildings, whose location 'has not been fixed with certainty' (HER 02272s) — possibly beneath the church",
+   "known": [
+    "cemetery of 858 recorded inhumations (HER) / 1,026 burials (Holbrook & Thomas 2005), mostly 7th–10th century",
+    "Area I: a possible curvilinear cemetery boundary, SW–NE turning E–W (HER 02272s)",
+    "Area II: rows of burials on a SW/NE alignment",
+    "pre-Conquest composite pillar cross, 2.97 m high, late 10th–early 11th c., SW of the church (Coflein 301373, ST1679073250)"
+   ],
+   "estimated": [
+    "timber church/oratory 12 x 6 m under the present church — reconstruction — estimated",
+    "curvilinear enclosure radius 45 m around church and cemetery — reconstruction — estimated",
+    "grave markers shown as a sample, not the excavated plan"
+   ],
+   "evidence": [
+    {
+     "label": "Heneb HER PRN 02272s, NGR ST16837334",
+     "url": "https://archwilio.org.uk/her/chi3/report/page.php?watprn=GGAT02272s"
+    },
+    {
+     "label": "Coflein NPRN 802090, ST1679073310",
+     "url": "https://coflein.gov.uk/en/site/802090/"
+    },
+    {
+     "label": "Holbrook & Thomas 2005, Medieval Archaeology 49, 1–92 (doi 10.5284/1071962)",
+     "url": "https://doi.org/10.5284/1071962"
+    },
+    {
+     "label": "Coflein NPRN 301373 (pillar cross)",
+     "url": "https://coflein.gov.uk/en/site/301373/"
+    },
+    {
+     "label": "Coflein NPRN 227363 (St Dochdwy's)",
+     "url": "https://coflein.gov.uk/en/site/227363/"
+    }
+   ],
+   "cross": {
+    "lat": 51.45222,
+    "lon": -3.1989,
+    "grid": "ST1679073250",
+    "height_m": 2.97
+   },
+   "model": "models/monastery.glb"
+  },
+  {
+   "id": "tymawr",
+   "name": {
+    "en": "Tŷ Mawr (Great House)",
+    "cy": "Tŷ Mawr",
+    "es": "Tŷ Mawr — la Casa Grande"
+   },
+   "period": "house of C17 date on internal evidence, core possibly medieval; altered C19; demolished 6 Dec 1988; first found mention by name 1824",
+   "date_range": [
+    1600,
+    1988
+   ],
+   "lat": 51.45301,
+   "lon": -3.199678,
+   "confidence": "medium-high: Stewart 1824 plan homestead group (tithe 1841 plots 209/210 'Courtyard &c', traced) centroid ST 16737 73353 agrees within c. 30 m with HER 02038s NGR ST16707335. Coflein 20182 gives ST1681073310 (c. 85 m east) — differing record",
+   "known": [
+    "limestone (local lias) house and barn next to the parish church (HER 02038s)",
+    "cross-passage, end-chimney plan with masonry partitions and battered N wall; ogee-stopped beams (Suggett/RCAHMW 1988)",
+    "ground floor surveyed 26 Apr 1974 (RCAHMW ST 1681 7331)",
+    "demolished 6 Dec 1988"
+   ],
+   "estimated": [
+    "building sizes and pitches from Tŷ Mawr reference photographs (4 Nov 2026) and two reference paintings and a historic aerial photograph (5 Nov 2026) (tools/tymawr-layout.json, 'best guess')",
+    "layout (v0.2.0, corrected 5 Nov 2026): the house and the stable range face south, with the stable front level with the house front (not forward of it); the stone barn on the west side of the group runs north-south and faces west, with the stable range joined at its south-east corner; distances between the barn group and the house, wall and lane lines, the glasshouse and the gate tree are estimated",
+    "church shown as massing only (v0.2.1): position from the OSM church point, c.107 m SE of the pin, as HER 02038s and the 1824 Stewart plan place it; a historic aerial photograph (5 Nov 2026) shows the tower east of the house group; the earlier photo-scaled geometry had placed it NE",
+     "lane (v0.2.1): drawn as a semicircle around the church, between the church and the house and its buildings, which sit on the outside of the curve; radius about 74 m, estimated; meadow hedges and the track north from a painted aerial plan, positions not checked"
+   ],
+   "evidence": [
+    {
+     "label": "Heneb HER PRN 02038s",
+     "url": "https://archwilio.org.uk/her/chi3/report/page.php?watprn=GGAT02038s"
+    },
+    {
+     "label": "Coflein NPRN 20182",
+     "url": "https://coflein.gov.uk/en/site/20182/"
+    },
+    {
+     "label": "Stewart survey 1824 plan 19, traced in the tithe H3 work (stewart-parcels.geojson)",
+     "url": "https://cedwyn.bucklerfamily.estate/tithe-h3/"
+    },
+    {
+     "label": "tools/tymawr-layout.json (from reference photographs and paintings)",
+     "url": ""
+    }
+   ],
+   "model": "models/tymawr.glb?v=0.2.4"
+  }
+ ]
+}

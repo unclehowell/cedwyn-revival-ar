@@ -1,0 +1,116 @@
+# REVIVAL TOUR — the chronology as a walking tour (v0.1.0)
+
+Reusable for: the live Wales tour, the online version (revival AR page), and the Argentina reconstruction museum. Order follows the site's own period list (work/cedwyn-movie/PERIODS.json) so it never skips a period. Each stop names its pin (SITES.json) and its sources. cy/es lines are an outline for native writers (the movie rule: native makes, never dubbed).
+
+Walking order on site: villa pin (stops 1, 2, 4, 6) → monastery pin by the church (stop 3) → Tŷ Mawr pin (stops 5, 7–12). About 350 m in all.
+
+## Stop 1 — The farmstead on the hill (late Iron Age, before c. AD 75)
+Pin: **roundhouse** · period `iron_age`
+
+Stand here and face the estuary of the River Ely. Before the Romans came, a family farmed this hill. Archaeologists in 1979 found a palisade trench, a curving slot and postholes that may be a round hut, with pottery including Glastonbury ware. The roundhouse you see is a reconstruction: its size and roof are estimated from other huts of the period; its place, under the later villa, is from the record.
+
+- cy: Cyn y Rhufeiniaid, roedd teulu'n ffermio'r bryn hwn. Yn 1979 cafwyd ffos balis, rhych grom a thyllau pyst, efallai tŷ crwn, gyda chrochenwaith Glastonbury. Ail-greadigaeth yw'r tŷ: amcangyfrif yw ei faint.
+- es: Antes de los romanos, una familia cultivaba esta colina. En 1979 se hallaron una zanja de empalizada, un surco curvo y agujeros de poste, quizá una casa redonda, con cerámica de tipo Glastonbury. La casa es una reconstrucción: su tamaño es estimado.
+- Sources: Heneb HER 00768s (Phase I); Holbrook & Thomas 2005, p.3; Owen-John 1988, BAR 188
+
+## Stop 2 — The stone house: Llandough villa (built 2nd century AD; enlarged early 3rd century; occupied to the early 4th century)
+Pin: **villa** · period `roman`
+
+On the same spot a Roman villa was built in the 2nd century and much enlarged in the early 3rd: stone ranges round a courtyard, a room warmed by a hypocaust, later a small bath suite, a precinct wall and a water pipe with its collars still in place. The long range you see follows the wall lines on the published excavation plan; heights, roofs and the courtyard layout are estimated.
+
+- cy: Codwyd fila Rufeinig yma yn yr 2il ganrif a'i hehangu yn y 3edd: rhesi carreg o amgylch buarth, ystafell â hypocawst, baddondy bach a wal derfyn. Dilyn cynllun y cloddio mae'r rhes hir; amcangyfrif yw'r uchder a'r toeau.
+- es: Aquí se construyó una villa romana en el siglo II, ampliada a comienzos del III: alas de piedra alrededor de un patio, una sala con hipocausto, luego unos baños y un muro de recinto. El ala larga sigue el plano publicado de la excavación; alturas y tejados son estimados.
+- Sources: Heneb HER 00768s (Phases II–III); Coflein NPRN 400051; Holbrook & Thomas 2005, Fig. 2; Knight 2005, 'From Villa to Monastery'
+
+## Stop 3 — St Dochdwy's monastery (by the mid-7th century to the late 10th or 11th century)
+Pin: **monastery** · period `early_medieval`
+
+Walk north to the church. Llandough was an important monastery by the mid-7th century and lasted into the 11th. North of the churchyard wall, archaeologists in 1994 recorded more than 800 burials, most of the 7th to 10th centuries, some laid in rows, some following a curving line that may mark a lost boundary. South-west of the church stands the 2.97-metre pillar cross of the late 10th or early 11th century. Where the monastery's own buildings stood has not been fixed; the timber church shown is placed under the present church as an estimate.
+
+- cy: Roedd Llandochau'n fynachlog bwysig erbyn canol y 7fed ganrif. Yn 1994 cofnodwyd dros 800 o gladdedigaethau i'r gogledd o fur y fynwent. I'r de-orllewin o'r eglwys saif y groes golofn 2.97 m. Amcangyfrif yw lleoliad yr eglwys bren.
+- es: Llandough fue un monasterio importante desde mediados del siglo VII. En 1994 se registraron más de 800 enterramientos al norte del muro del cementerio. Al suroeste de la iglesia se alza la cruz de columna de 2,97 m. La iglesia de madera es una ubicación estimada.
+- Sources: Heneb HER 02272s; Coflein NPRN 802090; Coflein NPRN 301373 (pillar cross); Holbrook & Thomas 2005
+
+## Stop 4 — Tewkesbury's grange (from the close of the 11th century)
+Pin: **villa** · period `norman`
+
+At the close of the 11th century Llandough was granted to Tewkesbury Abbey and a grange grew up. A dovecote and a barn, possibly of the late 12th century, were built over the villa ruins, some of the barn reusing the Roman walls.
+
+- cy: Ar ddiwedd yr 11eg ganrif rhoddwyd Llandochau i Abaty Tewkesbury. Codwyd colomendy ac ysgubor dros adfeilion y fila.
+- es: A fines del siglo XI Llandough pasó a la abadía de Tewkesbury. Sobre las ruinas de la villa se levantaron un palomar y un granero.
+- Sources: Holbrook & Thomas 2005, p.5; Heneb HER 00768s (Phases IV–V → 03719s)
+
+## Stop 5 — People on the house site (12th to early 14th century)
+Pin: **tymawr** · period `late_medieval`
+
+Now walk to Tŷ Mawr. Sherds of 12th-, 13th- and early 14th-century pottery were found on the steep slope just north-east of the farmhouse, showing people living on this spot in those centuries. The 1392 boundary record belongs to this period in the chronology.
+
+- cy: Cafwyd darnau o grochenwaith y 12fed i'r 14eg ganrif ar y llethr i'r gogledd-ddwyrain o'r ffermdy.
+- es: En la ladera al noreste de la casa se hallaron fragmentos de cerámica de los siglos XII al XIV.
+- Sources: Heneb HER 02038s (Suggett, RCAHMW, Dec 1988); Cedwyn chronology, period late_medieval
+
+## Stop 6 — The Dissolution (1530s–1540s)
+Pin: **villa** · period `tudor`
+
+Tewkesbury held the grange until the Dissolution, when it was confiscated by the Crown and sold.
+
+- cy: Daliodd Tewkesbury y faenor hyd y Diddymiad, pan gymerwyd hi gan y Goron a'i gwerthu.
+- es: Tewkesbury conservó la granja hasta la Disolución, cuando la Corona la confiscó y la vendió.
+- Sources: Holbrook & Thomas 2005, p.5
+
+## Stop 7 — Tŷ Mawr, the great house (17th century; the family's account dates the Williams family here from 1667)
+Pin: **tymawr** · period `williams_early`
+
+This was a limestone farmhouse of cross-passage, end-chimney plan; its beams and a blocked stone fireplace stair point to the 17th century, and its core may be older still. The Williams family's own account places them at Tŷ Mawr from 1667. The house you see is built from photographs of the farm and its measured layout; where those stop, it is an estimate.
+
+- cy: Ffermdy calchfaen gyda chyntedd croes a simnai dalcen; mae'r trawstiau'n awgrymu'r 17eg ganrif. Yn ôl hanes y teulu, roedd y Williams yn Nhŷ Mawr o 1667.
+- es: Era una casa de piedra caliza con pasillo transversal y chimenea en el hastial; sus vigas apuntan al siglo XVII. La familia Williams sitúa su llegada a Tŷ Mawr en 1667.
+- Sources: Heneb HER 02038s; Coflein NPRN 20182; tymawr-geometry.json (reference photographs)
+
+## Stop 8 — Cedfin alias Tŷ Mawr (1824)
+Pin: **tymawr** · period `estate_plans`
+
+The first mention by name found so far is the 1824 David Stewart survey: plan 19, 'Cedfin alias Ty Mawr farm', with its homestead group drawn where this pin stands.
+
+- cy: Y sôn cyntaf hyd yma yw arolwg David Stewart 1824: cynllun 19, 'Cedfin alias Ty Mawr farm'.
+- es: La primera mención por nombre hallada es el estudio de David Stewart de 1824: plano 19, 'Cedfin alias Ty Mawr farm'.
+- Sources: Stewart survey 1824, plan 19 (tithe H3 tracing)
+
+## Stop 9 — Victorian Great House Farm (1841–1900)
+Pin: **tymawr** · period `victorian`
+
+The tithe apportionment of about 1841 lists John Williams's holding as 36 parcels across Llandough and Leckwith, 119 acres 2 roods 30 perches. In 1897 Guglielmo Marconi stayed at Great House Farm.
+
+- cy: Mae rhaniad y degwm tua 1841 yn rhestru 36 llain John Williams. Ym 1897 arhosodd Marconi yn Nhŷ Mawr.
+- es: El reparto del diezmo de hacia 1841 registra 36 parcelas de John Williams. En 1897 Marconi se alojó en la granja.
+- Sources: NLW tithe apportionment 4542756; Glamorgan Village Book 1993; The Post, 14 Sep 1995, p.24
+
+## Stop 10 — The farm in the 20th century (1901–1945)
+Pin: **tymawr** · period `c20_early`
+
+Through the first half of the 20th century the house and its yards stood as the photographs show: the two-storey house, the stone gable bay, the pantiled range, the stables and the stone barn.
+
+- cy: Safai'r tŷ a'r buarthau fel y dengys y lluniau.
+- es: La casa y sus patios estaban como muestran las fotografías.
+- Sources: Reference photographs of the farm, Nov 2026 (private set)
+
+## Stop 11 — Surveyed, then gone (1974–1994)
+Pin: **tymawr** · period `c20_late`
+
+On 26 April 1974 the Royal Commission measured the ground floor. On 6 December 1988 the house and farm buildings were demolished. In 1994 the field north of the church was excavated before building, and the monastery's cemetery came to light.
+
+- cy: Mesurwyd y llawr gwaelod ar 26 Ebrill 1974. Dymchwelwyd y tŷ ar 6 Rhagfyr 1988. Ym 1994 daeth mynwent y fynachlog i'r golwg.
+- es: El 26 de abril de 1974 se midió la planta baja. El 6 de diciembre de 1988 la casa fue derribada. En 1994 apareció el cementerio del monasterio.
+- Sources: RCAHMW ST 1681 7331 (1974); Heneb HER 02038s; Heneb HER GGATE003875
+
+## Stop 12 — The revival (2000 onward)
+Pin: **tymawr** · period `c21`
+
+Today the four places stand again as reconstructions you can see on your phone, built from the records named at each stop. Where a record is missing, the model is marked 'estimated', and it will change as new evidence arrives — here in Wales, online, and at the reconstruction in Argentina.
+
+- cy: Heddiw mae'r pedwar lle yn sefyll eto fel ail-greadigaethau ar eich ffôn, o'r cofnodion a enwir ym mhob man aros.
+- es: Hoy los cuatro lugares vuelven a verse en su teléfono, reconstruidos a partir de los registros citados en cada parada; y en la reconstrucción en Argentina.
+- Sources: SITES.json
+
+## Estimated vs evidenced
+See SITES.json: every model element not in a record is listed under `estimated` and shown on the page as 'reconstruction — estimated'.

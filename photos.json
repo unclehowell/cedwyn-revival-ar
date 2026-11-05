@@ -1,0 +1,36 @@
+{
+ "version": "0.1.1",
+ "about": "Photo tripods for Revival AR (3D model loop, 5 Nov 2026): where each published photograph of Tŷ Mawr was taken from, estimated by matching the photograph to the model. Axes as the model: metres, +x east, +z south, origin at the pin. heading = compass bearing of the lens. Photos are linked from their published addresses, not copied. — Sion's Tab agent",
+ "tripods": [
+  {
+   "id": "cadw1988-house",
+   "site": "tymawr",
+   "x": 10.2,
+   "z": 22.8,
+   "heading": 336,
+   "estimated": true,
+   "photos": [
+    {
+     "src": "https://bpvsbuckler.bucklerfamily.estate/media/1988-cadw-farmhouse.jpg",
+     "caption": "Cadw survey photograph of the farmhouse, 29 July 1988 (released 2026, ATISN 27021)",
+     "view": "Tŷ Mawr (Great House) from the south-east: south front, open porch, east gable"
+    }
+   ]
+  },
+  {
+   "id": "cadw1988-barn",
+   "site": "tymawr",
+   "x": -57.3,
+   "z": 15.6,
+   "heading": 47,
+   "estimated": true,
+   "photos": [
+    {
+     "src": "https://bpvsbuckler.bucklerfamily.estate/media/1988-cadw-barn.jpg",
+     "caption": "Cadw survey photograph of the barn, 29 July 1988 (released 2026, ATISN 27021)",
+     "view": "The stone barn from the south-west: west wall with the cart porch, south gable"
+    }
+   ]
+  }
+ ]
+}

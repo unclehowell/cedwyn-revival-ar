@@ -1,0 +1,493 @@
+{
+ "source": "Tŷ Mawr reference photographs (4 Nov 2026: aerial from SE, house front, stables from the yard) and reference paintings + colourised historic aerial (5 Nov 2026: barn with stable range; house, forecourt and gate; aerial of the group). Layout corrected 5 Nov 2026 to the Executive's written corrections, which win over any reading of the images: house front faces south; stable range faces south with its front level with the house front (never further forward); the barn on the west side of the group faces west. Sizes scaled from the images, best guess.",
+ "axes": "metres, x east, z south, origin = centre of the house main range, house front faces south (+z)",
+ "buildings": [
+  {
+   "id": "house",
+   "x": 0,
+   "z": 0,
+   "len_ew": 11.0,
+   "dep_ns": 6.2,
+   "eave": 5.2,
+   "pitch": 35,
+   "storeys": 2,
+   "walls": "limewash",
+   "roof": "slate",
+   "chimneys": [
+    {
+     "at": "left",
+     "x": -3.4,
+     "w": 1.3,
+     "d": 1.0,
+     "h": 0.8,
+     "mat": "stone"
+    },
+    {
+     "at": "centre",
+     "x": 0.9,
+     "w": 1.0,
+     "d": 0.9,
+     "h": 0.9,
+     "mat": "stone"
+    },
+    {
+     "at": "right",
+     "w": 0.6,
+     "d": 0.7,
+     "h": 1.4,
+     "mat": "red brick"
+    }
+   ],
+   "porch": {
+    "x": -1.4,
+    "w": 2.6,
+    "d": 1.7,
+    "gabled": true,
+    "open": true
+   },
+   "faces": "south",
+   "ridge_tiles": true,
+   "gable_rubble_east": true,
+   "downpipe_x": 5.3,
+   "windows": [
+    [
+     -3.05,
+     3.15,
+     0.65,
+     1.4
+    ],
+    [
+     -0.6,
+     3.1,
+     0.7,
+     1.5
+    ],
+    [
+     2.7,
+     3.05,
+     0.8,
+     1.55,
+     "shutter"
+    ],
+    [
+     -3.3,
+     0.8,
+     0.75,
+     1.2
+    ],
+    [
+     2.4,
+     0.75,
+     0.75,
+     1.3
+    ]
+   ],
+   "photo_ref": "1988 Cadw survey photograph of the farmhouse, 29 July 1988 (front from the south-east): eave c.4.2 m, open timber porch left of centre, 3 first-floor windows, red ridge tiles, east gable bare rubble, red-brick east chimney | run 3 (5 Nov 2026) measured from the photograph with a perspective scale (window 1.5 m tall): eave c.5.2 m (first-floor window heads 0.6 m below the eave, ground-floor heads c.3.4 m below), roof c.35 deg, WEST END HIPPED (east end gabled with the brick stack), centre stack c.0.9 m east of centre, windows unevenly spaced (upper at -3.05/-0.6/+2.7 m, blank wall over the east 2.5 m), west upper window smaller",
+   "hip_west_pitch": 50
+  },
+  {
+   "id": "pantile_range",
+   "x": 13.5,
+   "z": -0.2,
+   "len_ew": 16.0,
+   "dep_ns": 5.6,
+   "eave": 2.8,
+   "pitch": 33,
+   "storeys": 1,
+   "walls": "limewash",
+   "roof": "red pantile"
+  },
+  {
+   "id": "stable_range",
+   "x": -20.5,
+   "z": 0.3,
+   "len_ew": 14.0,
+   "dep_ns": 5.6,
+   "eave": 2.9,
+   "pitch": 36,
+   "walls": "limewash",
+   "roof": "slate",
+   "doors": "5 green stable doors on south face",
+   "faces": "south",
+   "note": "front (south wall) at z=3.1 = level with the house front; west end abuts the barn's east wall"
+  },
+  {
+   "id": "stone_barn",
+   "x": -31.2,
+   "z": -0.4,
+   "len_ns": 7.0,
+   "dep_ew": 7.4,
+   "eave": 5.6,
+   "pitch": 36,
+   "walls": "dressed stone",
+   "roof": "slate",
+   "faces": "west",
+   "openings": [
+    {
+     "side": "south",
+     "x": -1.35,
+     "w": 2.0,
+     "h": 1.1,
+     "arch": true,
+     "mat": "dark",
+     "note": "round-headed opening, west of centre, narrower (1988 photograph; run 3 measured)"
+    },
+    {
+     "side": "south",
+     "x": 1.7,
+     "w": 2.3,
+     "h": 1.1,
+     "arch": true,
+     "mat": "dark",
+     "note": "round-headed opening, east of centre, wider (1988 photograph; run 3 measured)"
+    },
+    {
+     "side": "south",
+     "x": -1.6,
+     "y0": 2.4,
+     "w": 0.6,
+     "h": 2.2,
+     "mat": "timber",
+     "note": "tall louvred vent (1988 photograph; was a glazed window from the painting)"
+    },
+    {
+     "side": "south",
+     "x": 1.6,
+     "y0": 2.4,
+     "w": 0.6,
+     "h": 2.2,
+     "mat": "timber",
+     "note": "tall louvred vent (1988 photograph)"
+    },
+    {
+     "side": "west",
+     "z": -2.6,
+     "y0": 1.0,
+     "w": 1.1,
+     "h": 2.2,
+     "mat": "boards",
+     "note": "raised boarded pitching door with an arched head, c.3/4 of the way south along the west wall (1988 photograph; run 3)"
+    }
+   ],
+   "note": "run 3 (5 Nov 2026): the 1988 photograph shows a long barn (c.22 m) whose roof steps: the southern 7 m bay rides c.0.3 m higher (steeper pitch) than the northern 15 m; modelled as stone_barn (south bay, gables/openings) + stone_barn_north. Front (cart porch) faces west to the lane at the north end; south gable at z=3.1, level with the house front.",
+   "ridge_tiles": true,
+   "photo_ref": "1988 Cadw survey photograph of the barn, 29 July 1988 (west wall and south gable from the south-west): grey-brown rubble, pale weathered slate, red ridge tiles",
+   "len_note": "south bay 7.0 m of a c.22 m barn"
+  },
+  {
+   "id": "stone_barn_north",
+   "x": -31.2,
+   "z": -11.4,
+   "len_ns": 15.0,
+   "dep_ew": 7.4,
+   "eave": 5.6,
+   "pitch": 33,
+   "walls": "dressed stone",
+   "roof": "slate",
+   "ridge_tiles": true,
+   "faces": "west",
+   "note": "northern 15 m of the barn, lower ridge than the south bay (1988 photograph, run 3); carries the cart porch",
+   "cart_porch": {
+    "z": -16.4,
+    "w": 5.0,
+    "d": 2.4,
+    "side": "west",
+    "open": false,
+    "boarded_gable": true,
+    "door": "green cart door 3.3 x 3.5 kept (painting); 1988 photograph shows it open — owner decision pending, issue #216"
+   }
+  },
+  {
+   "id": "church",
+   "x": 50,
+   "z": -34,
+   "note": "position from aerial only; nave 18x7.6, west tower 5.6 sq x 15"
+  }
+ ],
+ "walls": [
+  {
+   "from": [
+    -11,
+    13.5
+   ],
+   "to": [
+    26,
+    13.5
+   ],
+   "gate_x": [
+    8.5,
+    12.1
+   ],
+   "gate_piers": true,
+   "gate": "dark five-bar gate between stone piers, ball finial on one pier",
+   "pier_h": 2.5
+  },
+  {
+   "from": [
+    -11,
+    4.8
+   ],
+   "to": [
+    -11,
+    13.5
+   ]
+  },
+  {
+   "from": [
+    26,
+    3.2
+   ],
+   "to": [
+    26,
+    13.5
+   ]
+  },
+  {
+   "from": [
+    -46,
+    -16
+   ],
+   "to": [
+    -46,
+    8
+   ],
+   "gate_z": [
+    -10.3,
+    -6.7
+   ],
+   "note": "dry-stone boundary wall along the lane in front of the barn (estimated line)"
+  },
+  {
+   "from": [
+    -46,
+    8
+   ],
+   "to": [
+    -11,
+    8
+   ],
+   "gate_x": [
+    -22.3,
+    -18.7
+   ],
+   "note": "yard wall south of the stable range (estimated line)"
+  }
+ ],
+ "yards": [
+  {
+   "gravel": [
+    -10.6,
+    25.6,
+    3.4,
+    13.1
+   ]
+  },
+  {
+   "gravel": [
+    -45.6,
+    -35.2,
+    -15.6,
+    7.6
+   ],
+   "note": "barn yard to the west (estimated)"
+  },
+  {
+   "gravel": [
+    -34.9,
+    -11.4,
+    3.4,
+    7.6
+   ],
+   "note": "stable yard to the south (estimated)"
+  }
+ ],
+ "cameras": {
+  "heli": {
+   "pos": [
+    -95,
+    70,
+    110
+   ],
+   "target": [
+    -12,
+    2,
+    0
+   ]
+  },
+  "ground": {
+   "pos": [
+    -75,
+    1.7,
+    40
+   ],
+   "target": [
+    -20,
+    4,
+    0
+   ]
+  }
+ },
+ "written_by": "Revival AR layout fix, 5 Nov 2026 (from the wales-3d geometry v0.1)",
+ "version": "0.2.3",
+ "features": [
+  {
+   "id": "glasshouse",
+   "x": -7.2,
+   "z": 7.8,
+   "w": 5.0,
+   "d": 2.8,
+   "base": 0.6,
+   "eave": 2.2,
+   "pitch": 30,
+   "note": "in front of the house to the west side (house-and-gate painting); size estimated"
+  },
+  {
+   "id": "gate_tree",
+   "x": 14.2,
+   "z": 15.8,
+   "trunk": 0.5,
+   "height": 15.0,
+   "crown": 6.0,
+   "note": "large spreading tree at the gate (painting): run 3 scaled to c.15 m against the house ridge (c.7.4 m) with an uneven lobed crown; species not checked",
+   "lobes": [
+    [
+     0,
+     0,
+     0,
+     5.0
+    ],
+    [
+     -3.2,
+     0.8,
+     1.5,
+     3.6
+    ],
+    [
+     2.8,
+     -1.0,
+     2.2,
+     3.4
+    ],
+    [
+     0.6,
+     1.5,
+     4.0,
+     3.2
+    ],
+    [
+     -1.2,
+     -2.0,
+     3.0,
+     2.8
+    ]
+   ]
+  }
+ ],
+ "not_checked": [
+  "exact distances between the barn group and the house (images give relative order only)",
+  "barn arch sizes (two round-headed doorways in the south gable, from the painting; sizes estimated)",
+  "stable door count (5 kept from 4 Nov photo)",
+  "boundary-wall and lane lines",
+  "glasshouse and tree sizes",
+  "lane radius and exact line (semicircle around the church, estimated)",
+  "church shape and exact position (massing only)",
+  "meadow hedges and the north track (painted aerial plan, positions not checked)",
+  "river / water course at the top right of the painted aerial plan (not modelled)"
+ ],
+ "church": {
+  "x": 74.8,
+  "z": 76.1,
+  "nave": [
+   18.0,
+   7.6
+  ],
+  "nave_eave": 6.0,
+  "tower": [
+   5.6,
+   15.0
+  ],
+  "note": "massing only: position = OSM church point (offset from the pin), nave 18 x 7.6 m and west tower 5.6 m sq x 15 m from the 4 Nov aerial; the 5 Nov historic aerial shows the tower east of the house group, as HER 02038s and the 1824 Stewart plan place it (c.107 m SE); shape and orientation estimated"
+ },
+ "lane_arc": {
+  "centre": [
+   74.8,
+   76.1
+  ],
+  "radius": 74.0,
+  "half_angle_deg": 90,
+  "width": 4.5,
+  "note": "the Executive (5 Nov 2026): a road curving like a clock / semicircle around the church, between the church and the house and its buildings; drawn as a semicircle centred on the church on the house side; the buildings sit on the outside of the curve; radius 74 m chosen so the lane passes between the forecourt (c.5 m clear of its south-east corner) and the church (estimated, not checked against a measured plan)"
+ },
+ "tracks": [
+  {
+   "from": [
+    10.3,
+    14.0
+   ],
+   "to": "arc",
+   "width": 3.0,
+   "note": "track from the forecourt gate to the lane (house-and-gate painting); line estimated"
+  },
+  {
+   "from": [
+    -49,
+    8
+   ],
+   "to": [
+    -49,
+    -70
+   ],
+   "width": 3.0,
+   "hedges": true,
+   "note": "track north between the meadows, west of the group (painted aerial plan); line not checked"
+  }
+ ],
+ "hedges": [
+  {
+   "from": [
+    -47,
+    -20
+   ],
+   "to": [
+    40,
+    -20
+   ],
+   "note": "field boundary north of the buildings (painted aerial plan); line not checked"
+  },
+  {
+   "from": [
+    0,
+    -20
+   ],
+   "to": [
+    -10,
+    -70
+   ],
+   "note": "hedge dividing the meadows (painted aerial plan); line not checked"
+  }
+ ],
+ "removed": [
+  {
+   "id": "stone_gable_bay",
+   "when": "2026-11-05",
+   "why": "issue #204: the house-and-gate painting and the 1988 Cadw photograph of the farmhouse both show the west end of the house plain, with no gabled stone bay or fourth stack",
+   "was": {
+    "id": "stone_gable_bay",
+    "x": -7.4,
+    "z": 0.6,
+    "len_ns": 8.2,
+    "dep_ew": 5.4,
+    "eave": 5.0,
+    "pitch": 44,
+    "walls": "rubble stone",
+    "roof": "slate",
+    "gable_faces": "south",
+    "chimney": {
+     "z": 3.8,
+     "mat": "stone"
+    },
+    "faces": "south"
+   }
+  }
+ ]
+}

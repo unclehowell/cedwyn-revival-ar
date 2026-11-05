@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Revival AR · Llandough — Cedwyn</title>
+<meta name="description" content="Four places on the hill at Llandough — Iron Age roundhouse, Roman villa, early medieval monastery and Tŷ Mawr — rebuilt from the records and pinned where they stood. View them in AR on your phone.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="revival-ar.css?v=0.2.4">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><b>Revival</b> <span>Llandough · AR</span></div>
+  <div class="ctl">
+    <select id="lang" aria-label="Language"><option value="en">EN</option><option value="cy">CY</option><option value="es">ES</option></select>
+    <button id="info" class="i" aria-label="About and changelog">i</button>
+  </div>
+</header>
+<nav class="tabs" role="tablist">
+  <button data-tab="map" class="on" role="tab">Map</button>
+  <button data-tab="view" role="tab">3D / AR</button>
+  <button data-tab="tour" role="tab">Tour</button>
+</nav>
+<main>
+  <section id="tab-map" class="pane on">
+    <div id="map" aria-label="Map of the four sites"></div>
+    <div class="here"><button id="locate">📍 You are here</button><span id="gpsline">Location off — tap to show distances.</span></div>
+    <ul id="cards" class="cards"></ul>
+  </section>
+  <section id="tab-view" class="pane">
+    <div class="pick" id="pick"></div>
+    <model-viewer id="mv" alt="Reconstruction" ar ar-modes="webxr scene-viewer quick-look" ar-placement="floor" camera-controls touch-action="pan-y" shadow-intensity="1" shadow-softness="0.8" exposure="1.05" tone-mapping="aces" environment-image="neutral" camera-orbit="35deg 62deg auto" interaction-prompt="none">
+      <button slot="ar-button" class="arbtn">View in your space (AR)</button>
+    </model-viewer>
+    <div class="est">Reconstruction — estimated where marked. Built from the records below; nothing here is invented scenery.</div>
+    <div id="onsite" class="onsite"></div>
+    <div id="detail" class="detail"></div>
+  </section>
+  <section id="tab-tour" class="pane">
+    <p class="lead">The chronology as a walk: villa pin → church → Tŷ Mawr, about 350 m. Each stop names its sources.</p>
+    <ol id="stops" class="stops"></ol>
+  </section>
+</main>
+<dialog id="about">
+  <h2>Revival AR <small id="ver">v0.2.4</small></h2>
+  <p>Positions come from the Historic Environment Record, Coflein and the published 1994 excavation plan. Where a record stops, the model is marked “reconstruction — estimated”, and it changes when new evidence arrives.</p>
+  <table><thead><tr><th>Version</th><th>Date</th><th>Change</th></tr></thead>
+  <tbody><tr><td>v0.2.4</td><td>5 Nov 2026</td><td>Tŷ Mawr measured against the 1988 photographs: taller house with a hipped west end, off-centre stack and unevenly spaced windows; longer barn with a stepped ridge, unequal gable arches and louvred vents; taller gate piers and a broad gate tree.</td></tr><tr><td>v0.2.3</td><td>5 Nov 2026</td><td>Tŷ Mawr more lifelike: walls, slate and pantile roofs coloured and textured from the 1988 Cadw survey photographs; house porch, windows, ridge tiles and stone east gable as photographed. Photo tripods: tap a camera marker to see the photograph taken from that spot.</td></tr><tr><td>v0.2.2</td><td>5 Nov 2026</td><td>Tŷ Mawr opens on the house group; stone in the colours of the paintings; barn south gable with two round-headed doorways and windows above.</td></tr><tr><td>v0.2.1</td><td>5 Nov 2026</td><td>Tŷ Mawr lane drawn as a semicircle around the church; church massing; meadow hedges.</td></tr><tr><td>v0.2.0</td><td>5 Nov 2026</td><td>Tŷ Mawr layout corrected: house and stables face south, stables level with the house front, west barn faces west.</td></tr><tr><td>v0.1.0</td><td>5 Nov 2026</td><td>First release: four pinned reconstructions, map with distances, AR view, 12-stop tour (en; cy/es outline).</td></tr></tbody></table>
+  <p class="small">Map data © OpenStreetMap contributors. Records: Heneb HER, RCAHMW Coflein, Holbrook &amp; Thomas 2005 (Medieval Archaeology 49).</p>
+  <form method="dialog"><button>Close</button></form>
+</dialog>
+<dialog id="photo" aria-label="Photograph">
+  <div id="photoset" class="photoset"></div>
+  <p id="photonote" class="small"></p>
+  <form method="dialog"><button>Close</button></form>
+</dialog>
+<script src="revival-ar.js?v=0.2.4"></script>
+</body>
+</html>
