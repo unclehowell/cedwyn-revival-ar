@@ -1,12 +1,12 @@
-/* Revival AR v0.2.4 — Llandough. Photo tripods from photos.json (tap a tripod -> the photograph taken from there). Positions and evidence from SITES.json; tour from tour.json. — Sion's Tab agent */
+/* Revival AR v0.3.0 — Llandough. Photo tripods from photos.json (tap a tripod -> the photograph taken from there). Positions and evidence from SITES.json; tour from tour.json. — Sion's Tab agent */
 (function(){
 'use strict';
 // opening camera per site (3D model loop, issue #198): Tŷ Mawr opens on the house group, not the whole 180 m model
 var CAM={tymawr:{target:'-10m 2m 2m',orbit:'-30deg 65deg 120m',fov:'30deg'}};
 var COL={roundhouse:'#b5874a',villa:'#c4553a',monastery:'#5f8fb8',tymawr:'#e8e2cf'};
-var UI={en:{conf:'Confidence',known:'From the record',est:'Reconstruction — estimated',src:'Sources',view:'View 3D / AR',tour:'Tour stop',away:'away',here:'You are here',off:'Location off — tap to show distances.',deny:'Location not shared; distances hidden.',onsite:'You are at this site. Tap “View in your space”, point the phone at open ground, turn until the arrow points north, then place it.',far:'You are {d} from this site. AR works anywhere at true size; on site it stands where the record puts it.',go:'Show on map',stop:'Stop',photo:'Photo',swipe:'swipe for more',tripod:'Tripod position estimated by matching the photograph to the model.'},
- cy:{conf:'Hyder',known:"O'r cofnod",est:'Ail-greadigaeth — amcangyfrif',src:'Ffynonellau',view:'Gweld 3D / AR',tour:'Man aros',away:'i ffwrdd',here:'Rydych chi yma',off:'Lleoliad i ffwrdd — tapiwch i weld pellteroedd.',deny:'Lleoliad heb ei rannu.',onsite:"Rydych chi ar y safle. Tapiwch “View in your space”, trowch nes bod y saeth yn pwyntio i'r gogledd, yna gosodwch.",far:'Rydych {d} o’r safle.',go:'Dangos ar y map',stop:'Man aros',photo:'Llun',swipe:'llithro am ragor',tripod:'Safle’r trybedd wedi’i amcangyfrif drwy gymharu’r llun â’r model.'},
- es:{conf:'Confianza',known:'Del registro',est:'Reconstrucción — estimada',src:'Fuentes',view:'Ver 3D / RA',tour:'Parada',away:'de distancia',here:'Usted está aquí',off:'Ubicación desactivada — toque para ver distancias.',deny:'Ubicación no compartida.',onsite:'Está en el sitio. Toque “View in your space”, gire hasta que la flecha apunte al norte y colóquelo.',far:'Está a {d} del sitio.',go:'Ver en el mapa',stop:'Parada',photo:'Foto',swipe:'deslice para ver más',tripod:'Posición del trípode estimada comparando la foto con el modelo.'}};
+var UI={en:{conf:'Confidence',known:'From the record',est:'Reconstruction — estimated',src:'Sources',view:'View 3D / AR',tour:'Tour stop',away:'away',here:'You are here',off:'Location off — tap to show distances.',deny:'Location not shared; distances hidden.',onsite:'You are at this site. Tap “View in your space”, point the phone at open ground, turn until the arrow points north, then place it.',far:'You are {d} from this site. AR works anywhere at true size; on site it stands where the record puts it.',go:'Show on map',stop:'Stop',photo:'Photo',swipe:'swipe for more',tripod:'Tripod position, height, heading and field of view estimated by matching the image to the model.',tripodat:'Tripod: lens {h} m above ground, facing {b}°, field of view {f}°.'},
+ cy:{conf:'Hyder',known:"O'r cofnod",est:'Ail-greadigaeth — amcangyfrif',src:'Ffynonellau',view:'Gweld 3D / AR',tour:'Man aros',away:'i ffwrdd',here:'Rydych chi yma',off:'Lleoliad i ffwrdd — tapiwch i weld pellteroedd.',deny:'Lleoliad heb ei rannu.',onsite:"Rydych chi ar y safle. Tapiwch “View in your space”, trowch nes bod y saeth yn pwyntio i'r gogledd, yna gosodwch.",far:'Rydych {d} o’r safle.',go:'Dangos ar y map',stop:'Man aros',photo:'Llun',swipe:'llithro am ragor',tripod:'Safle’r trybedd wedi’i amcangyfrif drwy gymharu’r llun â’r model.',tripodat:'Trybedd: lens {h} m uwch y ddaear, yn wynebu {b}°, maes golwg {f}°.'},
+ es:{conf:'Confianza',known:'Del registro',est:'Reconstrucción — estimada',src:'Fuentes',view:'Ver 3D / RA',tour:'Parada',away:'de distancia',here:'Usted está aquí',off:'Ubicación desactivada — toque para ver distancias.',deny:'Ubicación no compartida.',onsite:'Está en el sitio. Toque “View in your space”, gire hasta que la flecha apunte al norte y colóquelo.',far:'Está a {d} del sitio.',go:'Ver en el mapa',stop:'Parada',photo:'Foto',swipe:'deslice para ver más',tripod:'Posición del trípode estimada comparando la foto con el modelo.',tripodat:'Trípode: lente a {h} m del suelo, rumbo {b}°, campo de visión {f}°.'}};
 var lang=(navigator.language||'en').slice(0,2); if(!UI[lang]) lang='en';
 var S=null,T=null,P={tripods:[]},map=null,me=null,meMk=null,meAcc=null,cur='villa',heading=null,markers={};
 function $(id){return document.getElementById(id)}
@@ -38,11 +38,26 @@ function show(id){cur=id;var s=S.sites.filter(function(x){return x.id===id})[0];
   L+='<p class="meta">'+s.lat.toFixed(6)+', '+s.lon.toFixed(6)+'</p>';
   $('detail').innerHTML=L; onsite()}
 function tripods(id){var mv=$('mv');[].forEach.call(mv.querySelectorAll('.tripod'),function(e){e.remove()});
-  (P.tripods||[]).filter(function(p){return p.site===id}).forEach(function(p,i){var b=document.createElement('button');b.className='tripod';b.slot='hotspot-photo-'+i;
-    b.setAttribute('data-position',p.x+'m 1.7m '+p.z+'m');b.setAttribute('data-normal','0m 1m 0m');b.setAttribute('aria-label',t('photo')+': '+p.photos[0].caption);
-    b.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="#16201b"/><circle cx="12" cy="12.5" r="3.6" fill="#e6c77f"/></svg>';
-    b.onclick=function(e){e.stopPropagation();photo(p)}; mv.appendChild(b)})}
-function photo(p){var d=$('photo'),h='';p.photos.forEach(function(f,i){h+='<figure><img src="'+esc(f.src)+'" alt="'+esc(f.view||f.caption)+'" loading="lazy"><figcaption><b>'+esc(f.caption)+'</b>'+(f.view?'<br>'+esc(f.view):'')+
+  // the Executive 11:41 GMT 5 Nov 2026: tripods (not camera icons), each numbered with its central catalogue ID; the 3D tripod and its
+  // field-of-view cone are in the model, this label sits on the tripod head and opens the image with the catalogue description
+  (P.tripods||[]).filter(function(p){return p.site===id}).forEach(function(p,i){var b=document.createElement('button');b.className='tripod'+(p.kind==='painting'?' paint':'');b.slot='hotspot-photo-'+i;
+    b.setAttribute('data-position',p.x+'m '+((p.y||1.6)+0.25)+'m '+p.z+'m');b.setAttribute('data-normal','0m 1m 0m');b.setAttribute('aria-label',(p.cat_id||'')+' '+p.title);
+    b.innerHTML='<svg viewBox="0 0 12 14" width="10" height="12" aria-hidden="true"><rect x="3.5" y="0" width="5" height="3" fill="currentColor"/><path d="M6 3 L1 14 M6 3 L6 14 M6 3 L11 14" stroke="currentColor" stroke-width="1.4" fill="none"/></svg><span class="tl">'+esc(p.cat_id||'')+'</span>';
+    b.onclick=function(e){e.stopPropagation();photo(p)}; mv.appendChild(b)});
+  if(!mv._declut){mv._declut=1;var q=0;mv.addEventListener('camera-change',function(){if(!q){q=1;requestAnimationFrame(function(){q=0;declutter(mv)})}})}
+  setTimeout(function(){declutter(mv)},300)}
+// 3D model loop run 4: at 390 px the 27 catalogue labels piled on top of each other and over the buildings; a label whose centre falls
+// within one label-width of an already-labelled tripod shrinks to its tripod icon (still tappable); zooming in spreads them out again
+function declutter(mv){var kept=[];[].forEach.call(mv.querySelectorAll('.tripod'),function(e){var r=e.getBoundingClientRect();
+  if(!r.width)return;var cx=r.left+r.width/2,cy=r.top+r.height/2;
+  var hit=kept.some(function(k){return Math.abs(k[0]-cx)<58&&Math.abs(k[1]-cy)<24});
+  e.classList.toggle('mini',hit);if(!hit)kept.push([cx,cy])})}
+function pic(f){if(f.atlas){var g=f.grid||3,c=f.cell%g,r=Math.floor(f.cell/g),k=100/(g-1);
+    return '<div class="atlas" role="img" aria-label="'+esc(f.view||f.caption)+'" style="background-image:url('+esc(f.atlas)+');background-size:'+(g*100)+'% '+(g*100)+'%;background-position:'+(c*k)+'% '+(r*k)+'%"></div>'}
+  return '<img src="'+esc(f.src)+'" alt="'+esc(f.view||f.caption)+'" loading="lazy">'}
+function photo(p){var d=$('photo'),h='';p.photos.forEach(function(f,i){h+='<figure>'+pic(f)+'<figcaption><b>'+esc(p.cat_id||'')+'</b> · '+esc(p.title||f.caption)+(p.desc?'<br><span class="small">'+esc(p.desc)+'</span>':'')+
+    (p.page?'<br><a href="'+esc(p.page)+'" target="_blank" rel="noopener">'+esc(p.cat_id)+'</a>':'')+
+    '<br><span class="small">'+t('tripodat').replace('{h}',Math.round(p.y||1.6)).replace('{b}',p.heading).replace('{f}',p.fov||'')+'</span>'+
     (p.photos.length>1?'<br><span class="small">'+(i+1)+' / '+p.photos.length+' · '+t('swipe')+'</span>':'')+'</figcaption></figure>'});
   $('photoset').innerHTML=h; $('photonote').textContent=p.estimated?t('tripod'):''; if(d.showModal)d.showModal();else d.setAttribute('open','')}
 function onsite(){var s=S.sites.filter(function(x){return x.id===cur})[0];if(!s)return;var h='';
@@ -82,7 +97,7 @@ function all(){renderCards();renderTour();pick();show(cur);var q=location.hash.r
 $('lang').value=lang; $('lang').onchange=function(){lang=this.value;document.documentElement.lang=lang;if(!me)$('gpsline').textContent=t('off');all();Object.keys(markers).forEach(function(k){var s=S.sites.filter(function(x){return x.id===k})[0];markers[k].setTooltipContent(nm(s))})};
 $('info').onclick=function(){var d=$('about');if(d.showModal)d.showModal();else d.setAttribute('open','')};
 $('locate').onclick=locate;
-Promise.all([fetch('SITES.json').then(function(r){return r.json()}),fetch('tour.json').then(function(r){return r.json()}),fetch('photos.json?v=0.2.4').then(function(r){return r.json()}).catch(function(){return {tripods:[]}})]).then(function(a){S=a[0];T=a[1];P=a[2]||P;
+Promise.all([fetch('SITES.json').then(function(r){return r.json()}),fetch('tour.json').then(function(r){return r.json()}),fetch('photos.json?v=0.3.0').then(function(r){return r.json()}).catch(function(){return {tripods:[]}})]).then(function(a){S=a[0];T=a[1];P=a[2]||P;
   var p=new URLSearchParams(location.search).get('site'); if(p) cur=p;
   initMap(); all(); if(p) show(p);});
 })();

@@ -1,34 +1,650 @@
 {
- "version": "0.1.1",
- "about": "Photo tripods for Revival AR (3D model loop, 5 Nov 2026): where each published photograph of Tŷ Mawr was taken from, estimated by matching the photograph to the model. Axes as the model: metres, +x east, +z south, origin at the pin. heading = compass bearing of the lens. Photos are linked from their published addresses, not copied. — Sion's Tab agent",
+ "version": "0.3.0",
+ "about": "Photo tripods for Revival AR (3D model loop, 5 Nov 2026): one tripod per reference image, at the spot and height it was taken or painted from, with its field of view drawn as a cone. Each is numbered with its central catalogue ID (EV- for evidence records, AR- for the 25 reference images catalogued 5 Nov 2026) and shows the catalogue description. Positions, headings, heights and fields of view are estimated by matching each image to the model (paintings weigh below photographs). Axes as the model: metres, +x east, +z south, y up, origin at the house centre. heading = compass bearing of the lens; pitch = degrees above the horizon. — Sion's Tab agent",
  "tripods": [
   {
-   "id": "cadw1988-house",
+   "id": "EV-0095",
+   "cat_id": "EV-0095",
    "site": "tymawr",
    "x": 10.2,
    "z": 22.8,
+   "y": 1.6,
    "heading": 336,
+   "pitch": -2,
+   "fov": 45,
    "estimated": true,
+   "kind": "photograph",
+   "title": "Cadw farmhouse survey photograph, 29 July 1988 (disclosed 11 June 2026)",
+   "desc": "Central catalogue record EV-0095 (29 July 1988). No further description held in the record.",
+   "page": "https://cedwyn.bucklerfamily.estate/research/evidence/ev-0095-cadw-farmhouse-survey-photo-1988/",
    "photos": [
     {
      "src": "https://bpvsbuckler.bucklerfamily.estate/media/1988-cadw-farmhouse.jpg",
-     "caption": "Cadw survey photograph of the farmhouse, 29 July 1988 (released 2026, ATISN 27021)",
+     "caption": "Cadw farmhouse survey photograph, 29 July 1988 (disclosed 11 June 2026)",
      "view": "Tŷ Mawr (Great House) from the south-east: south front, open porch, east gable"
     }
    ]
   },
   {
-   "id": "cadw1988-barn",
+   "id": "EV-0094",
+   "cat_id": "EV-0094",
    "site": "tymawr",
    "x": -57.3,
    "z": 15.6,
+   "y": 1.6,
    "heading": 47,
+   "pitch": -2,
+   "fov": 45,
    "estimated": true,
+   "kind": "photograph",
+   "title": "Cadw barn survey photograph, 1988 (disclosed 11 June 2026)",
+   "desc": "Central catalogue record EV-0094 (29 July 1988). No further description held in the record.",
+   "page": "https://cedwyn.bucklerfamily.estate/research/evidence/ev-0094-cadw-barn-survey-photo-1988/",
    "photos": [
     {
      "src": "https://bpvsbuckler.bucklerfamily.estate/media/1988-cadw-barn.jpg",
-     "caption": "Cadw survey photograph of the barn, 29 July 1988 (released 2026, ATISN 27021)",
+     "caption": "Cadw barn survey photograph, 1988 (disclosed 11 June 2026)",
      "view": "The stone barn from the south-west: west wall with the cart porch, south gable"
+    }
+   ]
+  },
+  {
+   "id": "AR-0001",
+   "cat_id": "AR-0001",
+   "site": "tymawr",
+   "x": -45,
+   "z": 35,
+   "y": 1.6,
+   "heading": 40,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Stone barn with its cart porch and the house beyond, from the south-west field",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: stone barn with its cart porch and the house beyond, from the south-west field. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 0,
+     "grid": 3,
+     "caption": "Painted reconstruction: Stone barn with its cart porch and the house beyond, from the south-west field",
+     "view": "stone barn with its cart porch and the house beyond, from the south-west field"
+    }
+   ]
+  },
+  {
+   "id": "AR-0002",
+   "cat_id": "AR-0002",
+   "site": "tymawr",
+   "x": -110,
+   "z": 120,
+   "y": 120,
+   "heading": 45,
+   "pitch": -38,
+   "fov": 35,
+   "estimated": true,
+   "kind": "photograph",
+   "title": "Colourised aerial photograph: Tŷ Mawr (Great House) from the south-west",
+   "desc": "Colourised oblique aerial photograph of Tŷ Mawr (Great House): colourised oblique aerial view of the house, ranges and barns from the south-west. Photographer, date and original holder not recorded; received 5 November 2026 in a set of 25 reference images. A match to the Aerofilms or Vale of Glamorgan Libraries aerial series (EV-0658, EV-0659) is not checked.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 1,
+     "grid": 3,
+     "caption": "Colourised aerial photograph: Tŷ Mawr (Great House) from the south-west",
+     "view": "colourised oblique aerial view of the house, ranges and barns from the south-west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0003",
+   "cat_id": "AR-0003",
+   "site": "tymawr",
+   "x": -30,
+   "z": 30,
+   "y": 1.6,
+   "heading": 50,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: House and west range across the meadow, from the south-west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: house and west range across the meadow, from the south-west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 2,
+     "grid": 3,
+     "caption": "Painted reconstruction: House and west range across the meadow, from the south-west",
+     "view": "house and west range across the meadow, from the south-west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0004",
+   "cat_id": "AR-0004",
+   "site": "tymawr",
+   "x": -20,
+   "z": 22,
+   "y": 1.6,
+   "heading": 0,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Single-storey stable range, south front with its doors, from the south",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: single-storey stable range, south front with its doors, from the south. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 3,
+     "grid": 3,
+     "caption": "Painted reconstruction: Single-storey stable range, south front with its doors, from the south",
+     "view": "single-storey stable range, south front with its doors, from the south"
+    }
+   ]
+  },
+  {
+   "id": "AR-0005",
+   "cat_id": "AR-0005",
+   "site": "tymawr",
+   "x": -15,
+   "z": 20,
+   "y": 1.6,
+   "heading": 315,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Stone barn behind the yard wall and gate, from the yard",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: stone barn behind the yard wall and gate, from the yard. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 4,
+     "grid": 3,
+     "caption": "Painted reconstruction: Stone barn behind the yard wall and gate, from the yard",
+     "view": "stone barn behind the yard wall and gate, from the yard"
+    }
+   ]
+  },
+  {
+   "id": "AR-0006",
+   "cat_id": "AR-0006",
+   "site": "tymawr",
+   "x": -5,
+   "z": 15,
+   "y": 1.6,
+   "heading": 300,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Yard with the stable range and outbuildings, looking north-west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: yard with the stable range and outbuildings, looking north-west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 5,
+     "grid": 3,
+     "caption": "Painted reconstruction: Yard with the stable range and outbuildings, looking north-west",
+     "view": "yard with the stable range and outbuildings, looking north-west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0007",
+   "cat_id": "AR-0007",
+   "site": "tymawr",
+   "x": 8,
+   "z": 14,
+   "y": 1.6,
+   "heading": 330,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: South front of the house with the garden, from the south-east",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: south front of the house with the garden, from the south-east. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 6,
+     "grid": 3,
+     "caption": "Painted reconstruction: South front of the house with the garden, from the south-east",
+     "view": "south front of the house with the garden, from the south-east"
+    }
+   ]
+  },
+  {
+   "id": "AR-0008",
+   "cat_id": "AR-0008",
+   "site": "tymawr",
+   "x": 10,
+   "z": 16,
+   "y": 1.6,
+   "heading": 320,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: South front and east gable of the house with steps and wall, pantile range at right, from the south-east",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: south front and east gable of the house with steps and wall, pantile range at right, from the south-east. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 7,
+     "grid": 3,
+     "caption": "Painted reconstruction: South front and east gable of the house with steps and wall, pantile range at right, from the south-east",
+     "view": "south front and east gable of the house with steps and wall, pantile range at right, from the south-east"
+    }
+   ]
+  },
+  {
+   "id": "AR-0009",
+   "cat_id": "AR-0009",
+   "site": "tymawr",
+   "x": 5,
+   "z": -35,
+   "y": 1.6,
+   "heading": 180,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: House roof and chimney behind the long boundary wall, from the north",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: house roof and chimney behind the long boundary wall, from the north. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-1.webp?v=0.3.0",
+     "cell": 8,
+     "grid": 3,
+     "caption": "Painted reconstruction: House roof and chimney behind the long boundary wall, from the north",
+     "view": "house roof and chimney behind the long boundary wall, from the north"
+    }
+   ]
+  },
+  {
+   "id": "AR-0010",
+   "cat_id": "AR-0010",
+   "site": "tymawr",
+   "x": 15,
+   "z": -3,
+   "y": 1.6,
+   "heading": 270,
+   "pitch": 0,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Whitewashed gable end with its chimney, close view from the east",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: whitewashed gable end with its chimney, close view from the east. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 0,
+     "grid": 3,
+     "caption": "Painted reconstruction: Whitewashed gable end with its chimney, close view from the east",
+     "view": "whitewashed gable end with its chimney, close view from the east"
+    }
+   ]
+  },
+  {
+   "id": "AR-0011",
+   "cat_id": "AR-0011",
+   "site": "tymawr",
+   "x": 40,
+   "z": 20,
+   "y": 1.6,
+   "heading": 290,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Approach along the lane with the house and the pantile range, from the east",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: approach along the lane with the house and the pantile range, from the east. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 1,
+     "grid": 3,
+     "caption": "Painted reconstruction: Approach along the lane with the house and the pantile range, from the east",
+     "view": "approach along the lane with the house and the pantile range, from the east"
+    }
+   ]
+  },
+  {
+   "id": "AR-0012",
+   "cat_id": "AR-0012",
+   "site": "tymawr",
+   "x": -50,
+   "z": -30,
+   "y": 1.6,
+   "heading": 120,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Barns and outbuildings from the field to the north-west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: barns and outbuildings from the field to the north-west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 2,
+     "grid": 3,
+     "caption": "Painted reconstruction: Barns and outbuildings from the field to the north-west",
+     "view": "barns and outbuildings from the field to the north-west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0013",
+   "cat_id": "AR-0013",
+   "site": "tymawr",
+   "x": 14,
+   "z": 40,
+   "y": 1.6,
+   "heading": 350,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Track to the gate and tree, the house beyond, from the south",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: track to the gate and tree, the house beyond, from the south. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 3,
+     "grid": 3,
+     "caption": "Painted reconstruction: Track to the gate and tree, the house beyond, from the south",
+     "view": "track to the gate and tree, the house beyond, from the south"
+    }
+   ]
+  },
+  {
+   "id": "AR-0014",
+   "cat_id": "AR-0014",
+   "site": "tymawr",
+   "x": 9,
+   "z": 13,
+   "y": 1.6,
+   "heading": 325,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: South front of the house with porch, behind the low stone wall, from the south-east",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: south front of the house with porch, behind the low stone wall, from the south-east. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 4,
+     "grid": 3,
+     "caption": "Painted reconstruction: South front of the house with porch, behind the low stone wall, from the south-east",
+     "view": "south front of the house with porch, behind the low stone wall, from the south-east"
+    }
+   ]
+  },
+  {
+   "id": "AR-0015",
+   "cat_id": "AR-0015",
+   "site": "tymawr",
+   "x": -18,
+   "z": 22,
+   "y": 1.6,
+   "heading": 345,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Yard looking north to the stone barn and a white outbuilding",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: yard looking north to the stone barn and a white outbuilding. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 5,
+     "grid": 3,
+     "caption": "Painted reconstruction: Yard looking north to the stone barn and a white outbuilding",
+     "view": "yard looking north to the stone barn and a white outbuilding"
+    }
+   ]
+  },
+  {
+   "id": "AR-0016",
+   "cat_id": "AR-0016",
+   "site": "tymawr",
+   "x": -26,
+   "z": -6,
+   "y": 1.6,
+   "heading": 180,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Passage between the stone barn and the stable range, gate at the far end",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: passage between the stone barn and the stable range, gate at the far end. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 6,
+     "grid": 3,
+     "caption": "Painted reconstruction: Passage between the stone barn and the stable range, gate at the far end",
+     "view": "passage between the stone barn and the stable range, gate at the far end"
+    }
+   ]
+  },
+  {
+   "id": "AR-0017",
+   "cat_id": "AR-0017",
+   "site": "tymawr",
+   "x": -45,
+   "z": 5,
+   "y": 1.6,
+   "heading": 75,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Barn walls and the house beyond, from the field to the west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: barn walls and the house beyond, from the field to the west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 7,
+     "grid": 3,
+     "caption": "Painted reconstruction: Barn walls and the house beyond, from the field to the west",
+     "view": "barn walls and the house beyond, from the field to the west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0018",
+   "cat_id": "AR-0018",
+   "site": "tymawr",
+   "x": -1.9,
+   "z": 9,
+   "y": 1.6,
+   "heading": 0,
+   "pitch": 0,
+   "fov": 45,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Open timber porch and front door of the house, close view from the south",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: open timber porch and front door of the house, close view from the south. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-2.webp?v=0.3.0",
+     "cell": 8,
+     "grid": 3,
+     "caption": "Painted reconstruction: Open timber porch and front door of the house, close view from the south",
+     "view": "open timber porch and front door of the house, close view from the south"
+    }
+   ]
+  },
+  {
+   "id": "AR-0019",
+   "cat_id": "AR-0019",
+   "site": "tymawr",
+   "x": -40,
+   "z": 30,
+   "y": 1.6,
+   "heading": 30,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Stone barn with cart door over the field wall, from the south-west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: stone barn with cart door over the field wall, from the south-west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 0,
+     "grid": 3,
+     "caption": "Painted reconstruction: Stone barn with cart door over the field wall, from the south-west",
+     "view": "stone barn with cart door over the field wall, from the south-west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0020",
+   "cat_id": "AR-0020",
+   "site": "tymawr",
+   "x": -14,
+   "z": 14,
+   "y": 1.6,
+   "heading": 300,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Stable range with its open cart bay, looking west along the front",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: stable range with its open cart bay, looking west along the front. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 1,
+     "grid": 3,
+     "caption": "Painted reconstruction: Stable range with its open cart bay, looking west along the front",
+     "view": "stable range with its open cart bay, looking west along the front"
+    }
+   ]
+  },
+  {
+   "id": "AR-0021",
+   "cat_id": "AR-0021",
+   "site": "tymawr",
+   "x": 45,
+   "z": 45,
+   "y": 1.6,
+   "heading": 135,
+   "pitch": 1,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Church tower and nave across the field and the curving lane, from the house side",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: church tower and nave across the field and the curving lane, from the house side. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 2,
+     "grid": 3,
+     "caption": "Painted reconstruction: Church tower and nave across the field and the curving lane, from the house side",
+     "view": "church tower and nave across the field and the curving lane, from the house side"
+    }
+   ]
+  },
+  {
+   "id": "AR-0022",
+   "cat_id": "AR-0022",
+   "site": "tymawr",
+   "x": -10,
+   "z": 12,
+   "y": 1.6,
+   "heading": 290,
+   "pitch": -2,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Stable range front with a stone wall and an old cart, looking west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: stable range front with a stone wall and an old cart, looking west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 3,
+     "grid": 3,
+     "caption": "Painted reconstruction: Stable range front with a stone wall and an old cart, looking west",
+     "view": "stable range front with a stone wall and an old cart, looking west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0023",
+   "cat_id": "AR-0023",
+   "site": "tymawr",
+   "x": -40,
+   "z": 8,
+   "y": 1.6,
+   "heading": 30,
+   "pitch": 0,
+   "fov": 50,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Two-storey stone building with a lean-to and the yard wall, from the south-west",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: two-storey stone building with a lean-to and the yard wall, from the south-west. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 4,
+     "grid": 3,
+     "caption": "Painted reconstruction: Two-storey stone building with a lean-to and the yard wall, from the south-west",
+     "view": "two-storey stone building with a lean-to and the yard wall, from the south-west"
+    }
+   ]
+  },
+  {
+   "id": "AR-0024",
+   "cat_id": "AR-0024",
+   "site": "tymawr",
+   "x": -20,
+   "z": 16,
+   "y": 1.6,
+   "heading": 350,
+   "pitch": -2,
+   "fov": 55,
+   "estimated": true,
+   "kind": "painting",
+   "title": "Painted reconstruction: Stable range south front with its open bay and doors, from the south",
+   "desc": "Painted reconstruction of Tŷ Mawr (Great House) and its buildings: stable range south front with its open bay and doors, from the south. Artist and date not recorded; received 5 November 2026 in a set of 25 reference images. A painting is weighed below photographs as evidence of geometry.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 5,
+     "grid": 3,
+     "caption": "Painted reconstruction: Stable range south front with its open bay and doors, from the south",
+     "view": "stable range south front with its open bay and doors, from the south"
+    }
+   ]
+  },
+  {
+   "id": "AR-0025",
+   "cat_id": "AR-0025",
+   "site": "tymawr",
+   "x": 14,
+   "z": 42,
+   "y": 1.6,
+   "heading": 345,
+   "pitch": -1,
+   "fov": 55,
+   "estimated": true,
+   "kind": "photograph",
+   "title": "Colour photograph: Tŷ Mawr (Great House) from the lane to the south",
+   "desc": "Colour photograph (screen capture) of Tŷ Mawr (Great House): house from the lane to the south, gate and tree in front. Photographer and date not recorded; received 5 November 2026 in a set of 25 reference images.",
+   "photos": [
+    {
+     "atlas": "media/refs-3.webp?v=0.3.0",
+     "cell": 6,
+     "grid": 3,
+     "caption": "Colour photograph: Tŷ Mawr (Great House) from the lane to the south",
+     "view": "house from the lane to the south, gate and tree in front"
     }
    ]
   }

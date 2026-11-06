@@ -1,5 +1,6 @@
 
 import sys, math, json, os
+import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
 from glb import Model
 OUT=sys.argv[1]; os.makedirs(OUT, exist_ok=True)
@@ -84,7 +85,7 @@ m.mat('limewash',(1,1,1),0.9,tex=os.path.join(TX,'limewash.jpg'),tile=2.2); m.ma
 m.mat('rubble',(1,1,1),0.95,tex=os.path.join(TX,'rubble_house.jpg'),tile=1.6); m.mat('dressed',(1,1,1),0.9,tex=os.path.join(TX,'rubble_barn.jpg'),tile=2.0)
 m.mat('slate_barn',(1,1,1),0.6,tex=os.path.join(TX,'slate_barn.jpg'),tile=2.4); m.mat('ridge',(0.26,0.07,0.04),0.7); m.mat('frame',(0.85,0.84,0.80),0.6); m.mat('timber',(0.20,0.14,0.09),0.85)
 m.mat('brick',(0.20,0.06,0.035),0.85); m.mat('green',(0.16,0.33,0.2),0.6); m.mat('gravel',(0.33,0.30,0.25),1.0); m.mat('glass',(0.04,0.045,0.05),0.35,0.0)
-m.mat('dark',(0.08,0.08,0.08),0.9); m.mat('boards',(0.42,0.40,0.35),0.9); m.mat('gate',(0.10,0.11,0.10),0.7); m.mat('pane',(0.75,0.85,0.85),0.1,0.0,0.45); m.mat('bark',(0.30,0.22,0.15),0.95); m.mat('leaf',(0.24,0.36,0.18),1.0)
+m.mat('dark',(0.08,0.08,0.08),0.9); m.mat('boards',(0.42,0.40,0.35),0.9); m.mat('gate',(0.10,0.11,0.10),0.7); m.mat('pane',(0.75,0.85,0.85),0.1,0.0,0.45); m.mat('bark',(0.30,0.22,0.15),0.95); m.mat('leaf',(0.075,0.10,0.04),1.0)   # run 4 (#201): leaf colour sampled from the house-and-gate painting's tree (sRGB median 0.28/0.31/0.20 -> linear), was (0.24,0.36,0.18) and read mint
 WM={'limewash':'limewash','rubble stone':'rubble','dressed stone':'dressed'}; RM={'slate':'slate','red pantile':'pantile'}
 for b in G['buildings']:
     if b['id']=='church': continue
@@ -192,18 +193,29 @@ if 'church' in G:   # v0.2.1: church massing so the lane's semicircle reads (est
     m.box('rubble',c['x'],c['z'],nl,nw,c['nave_eave'],top=False); m.gable('slate','rubble',c['x'],c['z'],nl,nw,c['nave_eave'],45,ridge_along='x')
     m.box('rubble',c['x']-nl/2-ts/2,c['z'],ts,ts,th)
 m.mat('lane',(0.56,0.51,0.42),1.0); m.mat('hedge',(0.20,0.33,0.15),1.0)
-# photo tripods (3D model loop, the Executive's 10:16 direction 5 Nov 2026): one small tripod where each published photograph was taken
-# (photos.json beside SITES.json; positions estimated by matching the photograph to the model); the viewer puts a tappable marker on each.
+# photo tripods (3D model loop; the Executive 10:16 and 11:41 GMT 5 Nov 2026): a real tripod (three splayed legs, a pan head, a short
+# lens barrel) at the spot and height each reference image was taken or painted from, with its field of view drawn as a translucent cone
+# (heading, pitch and fov from photos.json). Aerial viewpoints get the same tripod head at altitude plus a plumb line to the ground.
 PJ=os.path.join(os.path.dirname(__file__),'..','photos.json')
 if os.path.exists(PJ):
-    m.mat('tripod',(0.05,0.05,0.05),0.5); m.mat('tripodcam',(0.55,0.42,0.12),0.4,0.6)
+    m.mat('tripod',(0.07,0.07,0.07),0.5); m.mat('tripodhead',(0.62,0.48,0.14),0.4,0.6); m.mat('tripodfov',(0.95,0.78,0.25),0.9,0.0,alpha=0.16)
+    def _fov(tx,ty,tz,hd,pt,fov,Lc):
+        h,p=math.radians(hd),math.radians(pt)
+        dv=np.array([math.sin(h)*math.cos(p),math.sin(p),-math.cos(h)*math.cos(p)]); r=np.array([math.cos(h),0.0,math.sin(h)]); u=np.cross(r,dv)
+        hw=math.tan(math.radians(fov)/2)*Lc; hv=hw*0.75; o=np.array([tx,ty,tz]); c=o+dv*Lc
+        cs=[c+r*hw+u*hv,c-r*hw+u*hv,c-r*hw-u*hv,c+r*hw-u*hv]
+        for k in range(4): m.tri('tripodfov',[o.tolist(),cs[k].tolist(),cs[(k+1)%4].tolist()])
     for tp in json.load(open(PJ))['tripods']:
         if tp.get('site')!='tymawr': continue
-        tx,tz,hh=tp['x'],tp['z'],math.radians(tp['heading'])
+        tx,tz,hh=tp['x'],tp['z'],math.radians(tp['heading']); ty=float(tp.get('y',1.6)); aerial=ty>4
+        base=ty-1.5 if aerial else 0.0; top=ty-0.12
         for k in range(3):
             a=hh+math.pi+(k-1)*2.1; fx,fz=tx+0.55*math.sin(a),tz-0.55*math.cos(a)
-            m.quad('tripod',[fx-0.03,0,fz],[fx+0.03,0,fz],[tx+0.02,1.45,tz],[tx-0.02,1.45,tz]); m.quad('tripod',[fx,0,fz-0.03],[fx,0,fz+0.03],[tx,1.45,tz+0.02],[tx,1.45,tz-0.02])
-        m.box('tripodcam',tx+0.12*math.sin(hh),tz-0.12*math.cos(hh),0.34,0.22,0.24,y0=1.45,yaw=math.degrees(hh))
+            m.quad('tripod',[fx-0.03,base,fz],[fx+0.03,base,fz],[tx+0.02,top,tz],[tx-0.02,top,tz]); m.quad('tripod',[fx,base,fz-0.03],[fx,base,fz+0.03],[tx,top,tz+0.02],[tx,top,tz-0.02])
+        if aerial: m.box('tripod',tx,tz,0.25,0.25,base,y0=0.0)
+        m.box('tripodhead',tx,tz,0.16,0.16,0.10,y0=top,yaw=math.degrees(hh))
+        m.box('tripodhead',tx+0.14*math.sin(hh),tz-0.14*math.cos(hh),0.09,0.16,0.09,y0=ty-0.04,yaw=math.degrees(hh))
+        _fov(tx,ty+0.01,tz,tp['heading'],tp.get('pitch',0),tp.get('fov',50),9.0 if aerial else 3.5)   # run 4: cones were 30 m (aerial) / 5 m, the aerial ones swept through the ground-level views and washed them yellow
 def strip(key,a,b,wd,h=0.06,y0=0.0):
     (ax,az),(bx,bz)=a,b; m.box(key,(ax+bx)/2,(az+bz)/2,math.hypot(bx-ax,bz-az)+0.2,wd,h,y0=y0,yaw=math.degrees(math.atan2(bz-az,bx-ax)))
 if 'lane_arc' in G:
