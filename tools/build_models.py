@@ -313,5 +313,12 @@ for tr in G.get('tracks',[]):
     if tr.get('hedges'):
         for off in (-tr['width']/2-0.6, tr['width']/2+0.6): strip('hedge',(a[0]+off,a[1]),(b[0]+off,b[1]),0.9,1.3)
 for hd in G.get('hedges',[]): strip('hedge',tuple(hd['from']),tuple(hd['to']),0.9,1.3)
+if G.get('gravel_polys'):   # 3D model loop run 24 (8 Nov 2026, #467): gravel lane areas drawn as flat polygons; colour sampled from the painted reconstruction AR-0011 (sRGB median 0.66/0.55/0.44), set as a linear factor through the viewer's measured lift
+    m.mat('lanegravel',(0.35,0.22,0.12),1.0)
+    for gp in G['gravel_polys']:
+        pts=[[float(x),float(gp.get('y',0.05)),float(z)] for x,z in gp['pts']]
+        (ax_,_,az_),(bx_,_,bz_),(cx_,_,cz_)=pts[:3]
+        if (bz_-az_)*(cx_-ax_)-(bx_-ax_)*(cz_-az_)<0: pts=pts[::-1]   # keep the face's normal pointing up
+        m.poly('lanegravel',pts)
 sizes['tymawr']=m.save(os.path.join(OUT,'tymawr.glb'),meta('tymawr',{"geometry_source":"tools/tymawr-layout.json v"+G.get('version','0.2.0')+" (Tŷ Mawr reference photographs and paintings; sizes best guess)","layout":"house and stable range face south, stable front level with the house front; west barn runs north-south and faces west","not_checked":G.get('not_checked',[]),"note":"pin = 1824 homestead-group centroid; model origin = house centre; church shown as massing only (see SITES.json)","version":G.get("version","0.2.1")}))
 print(json.dumps(sizes))

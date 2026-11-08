@@ -379,7 +379,8 @@
    "coping": 0.18,
    "note": "continuation east of the field gate (run 9, #457)",
    "stone": "field"
-  }
+  },
+  {"from": [6.2, 14.0], "to": [-4.0, 23.0], "h": 1.4, "t": 0.6, "note": "3D model loop run 24 (8 Nov 2026, #467 pantile C7): uncoped dry-stone flank wall running south-west from the forecourt wall just west of the gate, grass verge at its foot: AR-0011 shows it in the right foreground meeting the forecourt wall; the house-and-gate painting shows a wall flanking the approach on the left; line read from AR-0011 at the fixed pantile camera, height estimated"}
  ],
  "yards": [
   {
@@ -566,6 +567,9 @@
    "width": 3.0,
    "note": "3D model loop run 11 (#457): pale lane running along the outer (south-west) face of the coped field wall, in front of it as the barn-and-stables painting shows; line estimated from that view, not checked against a survey; starts at the field gate so it stays out of the 1988 barn photograph's foreground (hedge and grass there)"
   }
+ ],
+ "gravel_polys": [
+  {"pts": [[-16.0, 14.3], [4.35, 14.3], [-7.77, 25.0], [-16.0, 25.0]], "note": "3D model loop run 24 (8 Nov 2026, #467 pantile C7): gravel lane in front of the forecourt wall, bounded by a narrow grass verge at the foot of the forecourt wall and of the flank wall, as the painted reconstruction AR-0011 shows in its foreground; extent estimated (no survey)"}
  ],
  "hedges": [
   {
