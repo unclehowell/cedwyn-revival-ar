@@ -392,15 +392,6 @@
   },
   {
    "gravel": [
-    -45.6,
-    -35.2,
-    -15.6,
-    7.6
-   ],
-   "note": "barn yard to the west (estimated)"
-  },
-  {
-   "gravel": [
     -34.9,
     -11.4,
     3.4,
@@ -602,6 +593,12 @@
  ],
  "removed": [
   {
+   "id": "barn_yard_west",
+   "when": "2026-11-08",
+   "why": "3D model loop run 21: the 1988 Cadw survey photograph of the barn (from the south-west) shows long grass and shrubs right up to the west wall and in front of the cart porch, and no yard surface; the estimated gravel yard is removed so the meadow ground shows there",
+   "was": {"gravel": [-45.6, -35.2, -15.6, 7.6], "note": "barn yard to the west (estimated)"}
+  },
+  {
    "id": "stone_gable_bay",
    "when": "2026-11-05",
    "why": "issue #204: the house-and-gate painting and the 1988 Cadw photograph of the farmhouse both show the west end of the house plain, with no gabled stone bay or fourth stack",
@@ -640,6 +637,13 @@
   "note": "meadow ground (3D model loop run 5, 7 Nov 2026): colour = glTF linear factor of the median green of the colourised historic aerial's fields, lifted for the viewer's exposure; extent = the model's existing footprint (fields and hedge lines beyond the group not checked)"
  },
  "gardens": [
+  {
+   "rect": [-37.0, -34.95, -13.9, 3.1],
+   "h": 0.35,
+   "rgb": [0.06, 0.08, 0.025],
+   "note": "long grass and shrubs along the west wall of the barn, south of the cart porch (3D model loop run 21, 8 Nov 2026): the 1988 Cadw survey photograph of the barn shows uncut grass and shrubs against the wall base here; extent, heights and shrub positions estimated",
+   "shrubs": [[-35.8, 2.0, 0.9, 1.2], [-35.7, -1.2, 0.7, 0.9], [-36.0, -5.6, 0.8, 1.0], [-35.6, -9.4, 0.6, 0.8], [-36.3, -12.6, 1.5, 2.8]]
+  },
   {
    "rect": [
     -4.4,
