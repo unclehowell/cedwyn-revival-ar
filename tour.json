@@ -88,8 +88,8 @@
     "es": "Gente en el sitio de la casa"
    },
    "date": "12th to early 14th century",
-   "en": "Now walk to Tŷ Mawr. Sherds of 12th-, 13th- and early 14th-century pottery were found on the steep slope just north-east of the farmhouse, showing people living on this spot in those centuries. The 1392 boundary record belongs to this period in the chronology.",
-   "cy": "Cafwyd darnau o grochenwaith y 12fed i'r 14eg ganrif ar y llethr i'r gogledd-ddwyrain o'r ffermdy.",
+   "en": "Now walk to Tŷ Mawr. Sherds of 12th-, 13th- and early 14th-century pottery were found on the steep slope just north-east of Tŷ Mawr (Great House), showing people living on this spot in those centuries. The 1392 boundary record belongs to this period in the chronology.",
+   "cy": "Cafwyd darnau o grochenwaith y 12fed i'r 14eg ganrif ar y llethr i'r gogledd-ddwyrain o Dŷ Mawr.",
    "es": "En la ladera al noreste de la casa se hallaron fragmentos de cerámica de los siglos XII al XIV.",
    "sources": [
     "Heneb HER 02038s (Suggett, RCAHMW, Dec 1988)",
@@ -123,8 +123,8 @@
     "es": "Tŷ Mawr, la casa grande"
    },
    "date": "17th century; the family's account dates the Williams family here from 1667",
-   "en": "This was a limestone farmhouse of cross-passage, end-chimney plan; its beams and a blocked stone fireplace stair point to the 17th century, and its core may be older still. The Williams family's own account places them at Tŷ Mawr from 1667. The house you see is built from photographs of the farm and its measured layout; where those stop, it is an estimate.",
-   "cy": "Ffermdy calchfaen gyda chyntedd croes a simnai dalcen; mae'r trawstiau'n awgrymu'r 17eg ganrif. Yn ôl hanes y teulu, roedd y Williams yn Nhŷ Mawr o 1667.",
+   "en": "This was a limestone manorial house of cross-passage, end-chimney plan; its beams and a blocked stone fireplace stair point to the 17th century, and its core may be older still. The Williams family's own account places them at Tŷ Mawr from 1667. The house you see is built from photographs of Tŷ Mawr and its measured layout; where those stop, it is an estimate.",
+   "cy": "Maenordy calchfaen gyda chyntedd croes a simnai dalcen; mae'r trawstiau'n awgrymu'r 17eg ganrif. Yn ôl hanes y teulu, roedd y Williams yn Nhŷ Mawr o 1667.",
    "es": "Era una casa de piedra caliza con pasillo transversal y chimenea en el hastial; sus vigas apuntan al siglo XVII. La familia Williams sitúa su llegada a Tŷ Mawr en 1667.",
    "sources": [
     "Heneb HER 02038s",
@@ -156,12 +156,12 @@
    "title": {
     "en": "Victorian Great House Farm",
     "cy": "Fferm Tŷ Mawr yn oes Fictoria",
-    "es": "La granja en la época victoriana"
+    "es": "Tŷ Mawr en la época victoriana"
    },
    "date": "1841–1900",
    "en": "The tithe apportionment of about 1841 lists John Williams's holding as 36 parcels across Llandough and Leckwith, 119 acres 2 roods 30 perches. In 1897 Guglielmo Marconi stayed at Great House Farm.",
    "cy": "Mae rhaniad y degwm tua 1841 yn rhestru 36 llain John Williams. Ym 1897 arhosodd Marconi yn Nhŷ Mawr.",
-   "es": "El reparto del diezmo de hacia 1841 registra 36 parcelas de John Williams. En 1897 Marconi se alojó en la granja.",
+   "es": "El reparto del diezmo de hacia 1841 registra 36 parcelas de John Williams. En 1897 Marconi se alojó en Great House Farm.",
    "sources": [
     "NLW tithe apportionment 4542756",
     "Glamorgan Village Book 1993",
@@ -173,16 +173,16 @@
    "period": "c20_early",
    "pin": "tymawr",
    "title": {
-    "en": "The farm in the 20th century",
-    "cy": "Y fferm yn yr 20fed ganrif",
-    "es": "La granja en el siglo XX"
+    "en": "Tŷ Mawr in the 20th century",
+    "cy": "Tŷ Mawr yn yr 20fed ganrif",
+    "es": "Tŷ Mawr en el siglo XX"
    },
    "date": "1901–1945",
    "en": "Through the first half of the 20th century the house and its yards stood as the photographs show: the two-storey house, the stone gable bay, the pantiled range, the stables and the stone barn.",
    "cy": "Safai'r tŷ a'r buarthau fel y dengys y lluniau.",
    "es": "La casa y sus patios estaban como muestran las fotografías.",
    "sources": [
-    "Reference photographs of the farm, Nov 2026 (private set)"
+    "Reference photographs of Tŷ Mawr, Nov 2026 (private set)"
    ]
   },
   {
@@ -195,7 +195,7 @@
     "es": "Medida y luego derribada"
    },
    "date": "1974–1994",
-   "en": "On 26 April 1974 the Royal Commission measured the ground floor. On 6 December 1988 the house and farm buildings were demolished. In 1994 the field north of the church was excavated before building, and the monastery's cemetery came to light.",
+   "en": "On 26 April 1974 the Royal Commission measured the ground floor. On 6 December 1988 the house and its outbuildings were demolished. In 1994 the field north of the church was excavated before building, and the monastery's cemetery came to light.",
    "cy": "Mesurwyd y llawr gwaelod ar 26 Ebrill 1974. Dymchwelwyd y tŷ ar 6 Rhagfyr 1988. Ym 1994 daeth mynwent y fynachlog i'r golwg.",
    "es": "El 26 de abril de 1974 se midió la planta baja. El 6 de diciembre de 1988 la casa fue derribada. En 1994 apareció el cementerio del monasterio.",
    "sources": [

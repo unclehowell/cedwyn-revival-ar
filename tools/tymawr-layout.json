@@ -20,14 +20,15 @@
      "w": 1.3,
      "d": 1.0,
      "h": 0.8,
-     "mat": "stone"
+     "mat": "stone",
+     "pot": 0.14
     },
     {
      "at": "centre",
      "x": 0.9,
      "w": 1.0,
      "d": 0.9,
-     "h": 0.9,
+     "h": 1.5,
      "mat": "stone"
     },
     {
@@ -43,7 +44,8 @@
     "w": 2.6,
     "d": 1.7,
     "gabled": true,
-    "open": true
+    "open": true,
+    "dark": true
    },
    "faces": "south",
    "ridge_tiles": true,
@@ -83,7 +85,9 @@
     ]
    ],
    "photo_ref": "1988 Cadw survey photograph of the farmhouse, 29 July 1988 (front from the south-east): eave c.4.2 m, open timber porch left of centre, 3 first-floor windows, red ridge tiles, east gable bare rubble, red-brick east chimney | run 3 (5 Nov 2026) measured from the photograph with a perspective scale (window 1.5 m tall): eave c.5.2 m (first-floor window heads 0.6 m below the eave, ground-floor heads c.3.4 m below), roof c.35 deg, WEST END HIPPED (east end gabled with the brick stack), centre stack c.0.9 m east of centre, windows unevenly spaced (upper at -3.05/-0.6/+2.7 m, blank wall over the east 2.5 m), west upper window smaller",
-   "hip_west_pitch": 50
+   "hip_west_pitch": 50,
+    "hip_tiles": "strip",
+    "hip_mat": "porch_roof"
   },
   {
    "id": "pantile_range",
@@ -95,7 +99,38 @@
    "pitch": 33,
    "storeys": 1,
    "walls": "limewash",
-   "roof": "red pantile"
+   "roof": "red pantile",
+   "front_note": "run 13 (7 Nov 2026, #pantile issue): south front read from the painting AR-0011 (approach along the lane, from the east), checked against AR-0008: from the west, a small 4-pane window, a dark green boarded door in a deep reveal, a long blank stretch, a second narrower green door; the east part blank. x offsets corrected for the painting's foreshortening (far west end compressed), estimated",
+   "front": [
+    {
+     "k": "window",
+     "x": -4.6,
+     "w": 0.7,
+     "h": 0.7,
+     "sill": 1.0
+    },
+    {
+     "k": "door",
+     "x": -2.7,
+     "w": 1.1,
+     "h": 1.95
+    },
+    {
+     "k": "door",
+     "x": 3.2,
+     "w": 0.85,
+     "h": 1.85
+    }
+   ],
+   "rooflights": [
+    {
+     "x": -6.3,
+     "t": 0.4,
+     "w": 0.6,
+     "l": 0.8,
+     "note": "run 13: roof light on the south slope near the west end, as in the Cadw survey photograph of the farmhouse (29 July 1988); position estimated"
+    }
+   ]
   },
   {
    "id": "stable_range",
@@ -107,9 +142,41 @@
    "pitch": 36,
    "walls": "limewash",
    "roof": "slate",
-   "doors": "5 green stable doors on south face",
+   "doors": "run 12 (7 Nov 2026), read from the stable-range painting AR-0024 (south front, from the south), left to right: window, door, window, door, open bay with a door at its back, window, door; dark green boarded doors and 4-pane windows, square heads (AR-0004 shows arched heads and a different order: a painting conflict, AR-0024 followed as the one titled for this front); x offsets scaled to the 14 m range, estimated",
    "faces": "south",
-   "note": "front (south wall) at z=3.1 = level with the house front; west end abuts the barn's east wall"
+   "note": "front (south wall) at z=3.1 = level with the house front; west end abuts the barn's east wall",
+   "front": [
+    {
+     "k": "window",
+     "x": -6.4
+    },
+    {
+     "k": "door",
+     "x": -4.6
+    },
+    {
+     "k": "window",
+     "x": -2.9
+    },
+    {
+     "k": "door",
+     "x": -1.1
+    },
+    {
+     "k": "bay",
+     "x": 1.4,
+     "w": 3.0,
+     "door_x": 0.2
+    },
+    {
+     "k": "window",
+     "x": 4.6
+    },
+    {
+     "k": "door",
+     "x": 6.4
+    }
+   ]
   },
   {
    "id": "stone_barn",
@@ -220,7 +287,14 @@
    ],
    "gate_piers": true,
    "gate": "dark five-bar gate between stone piers, ball finial on one pier",
-   "pier_h": 2.5
+   "pier_h": 2.5,
+   "pyramid_caps": true,
+   "finial_pier_x": 16.6,
+   "finial_pier_h": 2.0,
+   "end_piers_x": [
+    18.9
+   ],
+   "note": "run 6 (7 Nov 2026, #203): pyramid caps on the gate piers; the ball/urn finial on its own pale pier east of the gate (x 16.6), then a tall pier with a pyramid cap (x 18.9), as the house-and-gate painting shows; positions read against the gate width, estimated"
   },
   {
    "from": [
@@ -255,7 +329,9 @@
     -10.3,
     -6.7
    ],
-   "note": "dry-stone boundary wall along the lane in front of the barn (estimated line)"
+   "note": "dry-stone boundary wall along the lane in front of the barn (estimated line); run 5 (7 Nov 2026, #341): drawn as a low hedge c.0.9 m, as the 1988 Cadw barn photograph shows grass and a low hedge between the lane and the west wall (line still estimated)",
+   "kind": "hedge",
+   "h": 0.9
   },
   {
    "from": [
@@ -270,7 +346,39 @@
     -22.3,
     -18.7
    ],
-   "note": "yard wall south of the stable range (estimated line)"
+   "note": "yard wall south of the stable range (estimated line); 3D model loop run 18 (7 Nov 2026): drawn as a low hedge c.0.9 m, as the 1988 Cadw barn photograph shows shrubs and long grass below the south gable and no stone wall, and the barn-and-stables painting shows grass and shrubs in front of the stable range (line still estimated)",
+   "kind": "hedge",
+   "h": 0.9
+  },
+  {
+   "from": [
+    -42.0,
+    9.2
+   ],
+   "to": [
+    -39.2,
+    13.3
+   ],
+   "h": 1.2,
+   "t": 0.6,
+   "coping": 0.18,
+   "note": "3D model loop run 9 (#457, 7 Nov 2026): coped dry-stone field wall in the meadow south-west of the barn, running across the barn-and-stables painting's view below the buildings, with a white field gate, as the painting shows; line estimated from that view (c.40 m in front of its viewpoint), not checked against a survey or the 1824 plan",
+   "stone": "field"
+  },
+  {
+   "from": [
+    -37.1,
+    16.2
+   ],
+   "to": [
+    -27.1,
+    30.5
+   ],
+   "h": 1.2,
+   "t": 0.6,
+   "coping": 0.18,
+   "note": "continuation east of the field gate (run 9, #457)",
+   "stone": "field"
   }
  ],
  "yards": [
@@ -332,14 +440,15 @@
  "features": [
   {
    "id": "glasshouse",
-   "x": -7.2,
-   "z": 7.8,
-   "w": 5.0,
+   "x": -6.8,
+   "z": 10.2,
+   "w": 4.0,
    "d": 2.8,
    "base": 0.6,
    "eave": 2.2,
    "pitch": 30,
-   "note": "in front of the house to the west side (house-and-gate painting); size estimated"
+   "note": "in front of the house to the west side, just inside the forecourt wall, glazed roof above the wall top (house-and-gate painting); 3D model loop run 7 (7 Nov 2026, #202): moved forward from z 7.8 to 10.2 and given white glazing bars; position and size estimated",
+   "bars": 1.0
   },
   {
    "id": "gate_tree",
@@ -381,6 +490,18 @@
      2.8
     ]
    ]
+  },
+  {
+   "id": "field_gate",
+   "from": [
+    -39.2,
+    13.3
+   ],
+   "to": [
+    -37.1,
+    16.2
+   ],
+   "note": "3D model loop run 9 (#457): white field gate in the coped field wall, from the barn-and-stables painting; position estimated"
   }
  ],
  "not_checked": [
@@ -392,7 +513,8 @@
   "lane radius and exact line (semicircle around the church, estimated)",
   "church shape and exact position (massing only)",
   "meadow hedges and the north track (painted aerial plan, positions not checked)",
-  "river / water course at the top right of the painted aerial plan (not modelled)"
+  "river / water course at the top right of the painted aerial plan (not modelled)",
+  "front garden extent and planting height; porch path line (run 6, from the 1988 farmhouse photograph)"
  ],
  "church": {
   "x": 74.8,
@@ -440,6 +562,18 @@
    "width": 3.0,
    "hedges": true,
    "note": "track north between the meadows, west of the group (painted aerial plan); line not checked"
+  },
+  {
+   "from": [
+    -41.2,
+    14.9
+   ],
+   "to": [
+    -27.5,
+    34.4
+   ],
+   "width": 3.0,
+   "note": "3D model loop run 11 (#457): pale lane running along the outer (south-west) face of the coped field wall, in front of it as the barn-and-stables painting shows; line estimated from that view, not checked against a survey; starts at the field gate so it stays out of the 1988 barn photograph's foreground (hedge and grass there)"
   }
  ],
  "hedges": [
@@ -488,6 +622,179 @@
     },
     "faces": "south"
    }
+  }
+ ],
+ "ground": {
+  "extent": [
+   -108.0,
+   127.0,
+   -68.0,
+   127.0
+  ],
+  "rgb": [
+   0.05,
+   0.085,
+   0.025
+  ],
+  "thick": 0.02,
+  "note": "meadow ground (3D model loop run 5, 7 Nov 2026): colour = glTF linear factor of the median green of the colourised historic aerial's fields, lifted for the viewer's exposure; extent = the model's existing footprint (fields and hedge lines beyond the group not checked)"
+ },
+ "gardens": [
+  {
+   "rect": [
+    -4.4,
+    -2.1,
+    3.2,
+    13.0
+   ],
+   "h": 0.3,
+   "note": "planted front garden west of the porch path, between the house and the forecourt wall (3D model loop run 6, 7 Nov 2026, #340): the 1988 Cadw farmhouse photograph shows shrubs and flowers behind the rubble front wall up to about the ground-floor sills, thickest along the front wall; extent and height estimated",
+   "shrubs": [
+    [
+     -3.6,
+     4.2,
+     0.7,
+     0.6
+    ],
+    [
+     -3.2,
+     11.8,
+     0.9,
+     0.8
+    ],
+    [
+     -4.0,
+     8.5,
+     0.8,
+     0.5
+    ],
+    [
+     -2.7,
+     12.4,
+     0.6,
+     0.9
+    ],
+    [
+     -3.9,
+     6.5,
+     0.6,
+     0.8
+    ],
+    [
+     -2.6,
+     9.8,
+     0.7,
+     1.1
+    ]
+   ],
+   "rgb": [
+    0.03,
+    0.052,
+    0.016
+   ]
+  },
+  {
+   "rect": [
+    -0.7,
+    5.8,
+    3.2,
+    13.0
+   ],
+   "h": 0.3,
+   "note": "planted front garden east of the porch path (run 6, #340; estimated)",
+   "shrubs": [
+    [
+     0.3,
+     12.2,
+     0.8,
+     0.7
+    ],
+    [
+     1.6,
+     11.9,
+     1.0,
+     1.0
+    ],
+    [
+     3.4,
+     12.3,
+     0.9,
+     0.6
+    ],
+    [
+     5.0,
+     11.9,
+     1.1,
+     0.9
+    ],
+    [
+     4.6,
+     4.1,
+     0.7,
+     0.5
+    ],
+    [
+     0.4,
+     4.3,
+     0.6,
+     0.7
+    ],
+    [
+     2.8,
+     8.0,
+     0.7,
+     0.4
+    ],
+    [
+     2.0,
+     4.0,
+     0.6,
+     0.9
+    ],
+    [
+     5.2,
+     6.4,
+     0.8,
+     1.2
+    ],
+    [
+     -0.2,
+     8.6,
+     0.6,
+     0.8
+    ]
+   ],
+   "rgb": [
+    0.03,
+    0.052,
+    0.016
+   ]
+  }
+ ],
+ "tree_groups": [
+  {
+   "note": "run 14 (#461): backdrop trees for the barnstables painting — one north of the west barn's north end and one north-east of the house (1988 Cadw photo shows dark foliage behind the east end only); placed with a camera-projection check so the west/centre house roof keeps open sky in housephoto and nothing rises above the barn ridge in barnphoto; estimated",
+   "trees": [
+    [
+     -22,
+     -7,
+     10,
+     4.4
+    ],
+    [
+     7.5,
+     -14,
+     8,
+     4.0
+    ]
+   ],
+   "rgb": [
+    0.05,
+    0.075,
+    0.028
+   ],
+   "seg": 12,
+   "dome": true
   }
  ]
 }

@@ -43,9 +43,9 @@ At the close of the 11th century Llandough was granted to Tewkesbury Abbey and a
 ## Stop 5 — People on the house site (12th to early 14th century)
 Pin: **tymawr** · period `late_medieval`
 
-Now walk to Tŷ Mawr. Sherds of 12th-, 13th- and early 14th-century pottery were found on the steep slope just north-east of the farmhouse, showing people living on this spot in those centuries. The 1392 boundary record belongs to this period in the chronology.
+Now walk to Tŷ Mawr. Sherds of 12th-, 13th- and early 14th-century pottery were found on the steep slope just north-east of Tŷ Mawr (Great House), showing people living on this spot in those centuries. The 1392 boundary record belongs to this period in the chronology.
 
-- cy: Cafwyd darnau o grochenwaith y 12fed i'r 14eg ganrif ar y llethr i'r gogledd-ddwyrain o'r ffermdy.
+- cy: Cafwyd darnau o grochenwaith y 12fed i'r 14eg ganrif ar y llethr i'r gogledd-ddwyrain o Dŷ Mawr.
 - es: En la ladera al noreste de la casa se hallaron fragmentos de cerámica de los siglos XII al XIV.
 - Sources: Heneb HER 02038s (Suggett, RCAHMW, Dec 1988); Cedwyn chronology, period late_medieval
 
@@ -61,9 +61,9 @@ Tewkesbury held the grange until the Dissolution, when it was confiscated by the
 ## Stop 7 — Tŷ Mawr, the great house (17th century; the family's account dates the Williams family here from 1667)
 Pin: **tymawr** · period `williams_early`
 
-This was a limestone farmhouse of cross-passage, end-chimney plan; its beams and a blocked stone fireplace stair point to the 17th century, and its core may be older still. The Williams family's own account places them at Tŷ Mawr from 1667. The house you see is built from photographs of the farm and its measured layout; where those stop, it is an estimate.
+This was a limestone manorial house of cross-passage, end-chimney plan; its beams and a blocked stone fireplace stair point to the 17th century, and its core may be older still. The Williams family's own account places them at Tŷ Mawr from 1667. The house you see is built from photographs of Tŷ Mawr and its measured layout; where those stop, it is an estimate.
 
-- cy: Ffermdy calchfaen gyda chyntedd croes a simnai dalcen; mae'r trawstiau'n awgrymu'r 17eg ganrif. Yn ôl hanes y teulu, roedd y Williams yn Nhŷ Mawr o 1667.
+- cy: Maenordy calchfaen gyda chyntedd croes a simnai dalcen; mae'r trawstiau'n awgrymu'r 17eg ganrif. Yn ôl hanes y teulu, roedd y Williams yn Nhŷ Mawr o 1667.
 - es: Era una casa de piedra caliza con pasillo transversal y chimenea en el hastial; sus vigas apuntan al siglo XVII. La familia Williams sitúa su llegada a Tŷ Mawr en 1667.
 - Sources: Heneb HER 02038s; Coflein NPRN 20182; tymawr-geometry.json (reference photographs)
 
@@ -82,22 +82,22 @@ Pin: **tymawr** · period `victorian`
 The tithe apportionment of about 1841 lists John Williams's holding as 36 parcels across Llandough and Leckwith, 119 acres 2 roods 30 perches. In 1897 Guglielmo Marconi stayed at Great House Farm.
 
 - cy: Mae rhaniad y degwm tua 1841 yn rhestru 36 llain John Williams. Ym 1897 arhosodd Marconi yn Nhŷ Mawr.
-- es: El reparto del diezmo de hacia 1841 registra 36 parcelas de John Williams. En 1897 Marconi se alojó en la granja.
+- es: El reparto del diezmo de hacia 1841 registra 36 parcelas de John Williams. En 1897 Marconi se alojó en Great House Farm.
 - Sources: NLW tithe apportionment 4542756; Glamorgan Village Book 1993; The Post, 14 Sep 1995, p.24
 
-## Stop 10 — The farm in the 20th century (1901–1945)
+## Stop 10 — Tŷ Mawr in the 20th century (1901–1945)
 Pin: **tymawr** · period `c20_early`
 
 Through the first half of the 20th century the house and its yards stood as the photographs show: the two-storey house, the stone gable bay, the pantiled range, the stables and the stone barn.
 
 - cy: Safai'r tŷ a'r buarthau fel y dengys y lluniau.
 - es: La casa y sus patios estaban como muestran las fotografías.
-- Sources: Reference photographs of the farm, Nov 2026 (private set)
+- Sources: Reference photographs of Tŷ Mawr, Nov 2026 (private set)
 
 ## Stop 11 — Surveyed, then gone (1974–1994)
 Pin: **tymawr** · period `c20_late`
 
-On 26 April 1974 the Royal Commission measured the ground floor. On 6 December 1988 the house and farm buildings were demolished. In 1994 the field north of the church was excavated before building, and the monastery's cemetery came to light.
+On 26 April 1974 the Royal Commission measured the ground floor. On 6 December 1988 the house and its outbuildings were demolished. In 1994 the field north of the church was excavated before building, and the monastery's cemetery came to light.
 
 - cy: Mesurwyd y llawr gwaelod ar 26 Ebrill 1974. Dymchwelwyd y tŷ ar 6 Rhagfyr 1988. Ym 1994 daeth mynwent y fynachlog i'r golwg.
 - es: El 26 de abril de 1974 se midió la planta baja. El 6 de diciembre de 1988 la casa fue derribada. En 1994 apareció el cementerio del monasterio.

@@ -91,10 +91,13 @@ class Model:
                          "doubleSided":True, **({"alphaMode":"BLEND"} if m['alpha']<1 else {})})
             P,N,I=self.geo[k]
             if not I: continue
-            P=np.array(P,np.float32); N=np.array(N,np.float32); I=np.array(I,np.uint32)
+            P=np.array(P,np.float32); N=np.array(N,np.float32)
+            PN=np.ascontiguousarray(np.hstack([P,N])); _,first,inv=np.unique(PN.view(np.dtype((np.void,24))).ravel(),return_index=True,return_inverse=True)   # 3D model loop run 13: weld identical (position, normal) vertices (lossless; quads drop 6 -> 4 vertices)
+            order=np.argsort(first); remap=np.empty_like(order); remap[order]=np.arange(len(order)); P=P[first[order]]; N=N[first[order]]; I=remap[inv.ravel()[np.asarray(I)]]
+            I=np.array(I,np.uint16 if len(P)<65536 else np.uint32)   # 3D model loop run 9: 16-bit indices where they fit (lossless, about a sixth off the GLB)
             vp=add(P,34962); accs.append({"bufferView":vp,"componentType":5126,"count":len(P),"type":"VEC3","min":P.min(0).tolist(),"max":P.max(0).tolist()}); ap=len(accs)-1
             vn=add(N,34962); accs.append({"bufferView":vn,"componentType":5126,"count":len(N),"type":"VEC3"}); an=len(accs)-1
-            vi=add(I,34963); accs.append({"bufferView":vi,"componentType":5125,"count":len(I),"type":"SCALAR"}); ai=len(accs)-1
+            vi=add(I,34963); accs.append({"bufferView":vi,"componentType":(5123 if I.dtype==np.uint16 else 5125),"count":len(I),"type":"SCALAR"}); ai=len(accs)-1
             att={"POSITION":ap,"NORMAL":an}
             if m.get('tex'):   # box-projected UVs: drop the dominant normal axis, metres / tile
                 ax=np.abs(N).argmax(1); t=float(m['tile'])
