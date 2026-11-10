@@ -30,7 +30,7 @@ class Model:
         for (ax,az),(bx,bz) in q:
             self.quad(key,T(ax,y0,az),T(bx,y0,bz),T(bx,y1,bz),T(ax,y1,az))
         if top: self.quad(key,T(x0,y1,z1),T(x1,y1,z1),T(x1,y1,z0),T(x0,y1,z0))
-    def gable(self,key_roof,key_wall,cx,cz,w,d,eave,pitch,yaw=0.0,ridge_along='x',over=0.3,hip0=None):
+    def gable(self,key_roof,key_wall,cx,cz,w,d,eave,pitch,yaw=0.0,ridge_along='x',over=0.3,hip0=None,hip1=None):
         """Gabled roof over a w x d footprint at height eave; ridge along local x (or z)."""
         c,s=math.cos(math.radians(yaw)),math.sin(math.radians(yaw))
         def T(x,y,z): return [cx+x*c-z*s, y, cz+x*s+z*c]
@@ -40,16 +40,17 @@ class Model:
         def U(a,y,b): return T(a,y,b) if ridge_along=='x' else T(b,y,a)
         e=eave-over*math.tan(math.radians(pitch))
         Lg=L-over
-        if hip0:   # hipped at the -L end (3D model loop, 5 Nov 2026: the 1988 photograph shows the house's west end hipped); hip0 = hip pitch in degrees
-            xr=-Lg+rh/math.tan(math.radians(hip0))
-            self.quad(key_roof,U(-L,e,S),U(L,e,S),U(L,ry,0),U(xr,ry,0))
-            self.quad(key_roof,U(L,e,-S),U(-L,e,-S),U(xr,ry,0),U(L,ry,0))
-            self.tri(key_roof,[U(-L,e,-S),U(-L,e,S),U(xr,ry,0)])
-            self.hip_ridge=xr
+        if hip0 or hip1:   # hipped ends (3D model loop: run 3, 5 Nov 2026, house west end from the 1988 photograph = hip0 at the -L end; run 26, 9 Nov 2026, #467, pantile range east end from AR-0011 = hip1 at the +L end); pitches in degrees
+            xa=-Lg+rh/math.tan(math.radians(hip0)) if hip0 else -L
+            xb=Lg-rh/math.tan(math.radians(hip1)) if hip1 else L
+            self.quad(key_roof,U(-L,e,S),U(L,e,S),U(xb,ry,0),U(xa,ry,0))
+            self.quad(key_roof,U(L,e,-S),U(-L,e,-S),U(xa,ry,0),U(xb,ry,0))
+            if hip0: self.tri(key_roof,[U(-L,e,-S),U(-L,e,S),U(xa,ry,0)]); self.hip_ridge=xa
+            if hip1: self.tri(key_roof,[U(L,e,S),U(L,e,-S),U(xb,ry,0)]); self.hip_ridge1=xb
         else:
             self.quad(key_roof,U(-L,e,S),U(L,e,S),U(L,ry,0),U(-L,ry,0))
             self.quad(key_roof,U(L,e,-S),U(-L,e,-S),U(-L,ry,0),U(L,ry,0))
-        for sx in ((Lg,) if hip0 else (-Lg,Lg)):
+        for sx in tuple(v for v,h in ((-Lg,hip0),(Lg,hip1)) if not h):
             pts=[U(sx,eave,span),U(sx,eave,-span),U(sx,ry,0)]
             if sx<0: pts=pts[::-1]
             self.tri(key_wall,pts)

@@ -100,6 +100,8 @@
    "storeys": 1,
    "walls": "limewash",
    "roof": "red pantile",
+      "hip_east_pitch": 42,
+      "hip_note": "3D model loop run 26 (9 Nov 2026, #467 pantile C4): east end hipped, as the painted reconstruction AR-0011 shows (the roof runs down to the eave at the far end; no gable wall above the eave); hip pitch estimated",
    "front_note": "run 13 (7 Nov 2026, #pantile issue): south front read from the painting AR-0011 (approach along the lane, from the east), checked against AR-0008: from the west, a small 4-pane window, a dark green boarded door in a deep reveal, a long blank stretch, a second narrower green door; the east part blank. x offsets corrected for the painting's foreshortening (far west end compressed), estimated",
    "front": [
     {

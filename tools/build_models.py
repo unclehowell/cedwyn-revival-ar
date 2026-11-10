@@ -96,7 +96,7 @@ for b in G['buildings']:
     if 'len_ew' in b: w,d,ridge=b['len_ew'],b['dep_ns'],'x'
     else: w,d,ridge=b['dep_ew'],b['len_ns'],'z'
     m.box(wm,b['x'],b['z'],w,d,b['eave'],top=False)
-    ry=m.gable(rm,wm,b['x'],b['z'],w,d,b['eave'],b['pitch'],ridge_along=ridge,hip0=b.get('hip_west_pitch'))
+    ry=m.gable(rm,wm,b['x'],b['z'],w,d,b['eave'],b['pitch'],ridge_along=ridge,hip0=b.get('hip_west_pitch'),hip1=b.get('hip_east_pitch'))
     for ch in b.get('chimneys',[]):   # 'x' (offset from the building centre), 'w', 'd', 'h' (height above the ridge): measured from the 1988 photograph (3D model loop run 3)
         at=ch.get('at') or ('left' if ch.get('x',0)<1 else 'right')
         cxx={'left':b['x']-w/2+0.5,'centre':b['x'],'right':b['x']+w/2-0.5}[at]
